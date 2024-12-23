@@ -1,0 +1,162 @@
+{
+  "campaign": {
+    "basic": {
+      "id": "120215151271950063",
+      "name": "ski_instructors_are_waiting_for_you__awareness__120215151271950063",
+      "status": "ACTIVE",
+      "objective": "OUTCOME_AWARENESS",
+      "special_ad_categories": []
+    },
+    "timing": {
+      "created": "2024-12-21T20:05:10+0100",
+      "updated": "2024-12-22T10:22:06+0100",
+      "start": "2024-12-27T08:00:00+0100"
+    },
+    "budget": {
+      "remaining": "0"
+    }
+  },
+  "statistics": {
+    "counts": {
+      "adSets": 1,
+      "ads": 1
+    },
+    "status": {
+      "campaign": "ACTIVE",
+      "adSets": {
+        "ACTIVE": 1
+      },
+      "ads": {
+        "ACTIVE": 1
+      }
+    }
+  },
+  "targeting": {
+    "locations": [
+      "Harrachov"
+    ],
+    "ages": {
+      "min": 18,
+      "max": 65
+    }
+  },
+  "details": {
+    "adSets": [
+      {
+        "id": "120215172956790063",
+        "name": "ski_instructors_are_waiting_for_you__awareness__120215151271950063__en_harrachov_guests_fitness_outdoors",
+        "status": "ACTIVE",
+        "targeting": {
+          "demographics": {
+            "age": {
+              "min": 18,
+              "max": 65
+            },
+            "locales": [
+              6
+            ]
+          },
+          "locations": {
+            "cities": [
+              {
+                "country": "CZ",
+                "distance_unit": "mile",
+                "key": "520595",
+                "name": "Harrachov",
+                "region": "Liberec Region",
+                "region_id": "817"
+              }
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "excluded_audiences": [
+            {
+              "id": "120214862440040063",
+              "name": "FB-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120214862452840063",
+              "name": "IG-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120215057344580063",
+              "name": "video__all__ski_openning__25p__365"
+            }
+          ]
+        },
+        "optimization": {
+          "goal": "REACH",
+          "billing": "IMPRESSIONS"
+        },
+        "budget": {
+          "daily": "15000",
+          "lifetime": "0"
+        },
+        "schedule": {
+          "start": "2024-12-27T08:00:00+0100"
+        }
+      }
+    ],
+    "ads": [
+      {
+        "id": "120215172956840063",
+        "name": "ski_instructors_are_waiting_for_you__awareness__120215151271950063__en_harrachov_guests_fitness_outdoors",
+        "status": "ACTIVE",
+        "creative": {
+          "id": "120215179215000063",
+          "content": {
+            "media": [
+              {
+                "type": "image",
+                "hash": "629a9f5287e2fbc37af8303de5a1651b"
+              },
+              {
+                "type": "image",
+                "hash": "381d57686b6043009a2b2ab9a90a1797"
+              },
+              {
+                "type": "image",
+                "hash": "e05ee4a43d22edeff16d63420a4be7d0"
+              },
+              {
+                "type": "video",
+                "id": "1313742539823239",
+                "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=ace027&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&_nc_gid=A9sjLjjE7UIK99s9aPNJmW5&oh=00_AYCT20Gl-CujBFXiLpQSO9sSuQsWivbyz-EQWqzLg1MQqw&oe=676DAAB7"
+              },
+              {
+                "type": "video",
+                "id": "933348092057417",
+                "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=ace027&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&_nc_gid=A9sjLjjE7UIK99s9aPNJmW5&oh=00_AYDiq2cPAGonS3MpAL-l_5u0pKiTvnGcMqHqQkza8IzPkQ&oe=676DBD1D"
+              },
+              {
+                "type": "video",
+                "id": "1077683197428940",
+                "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=ace027&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&_nc_gid=A9sjLjjE7UIK99s9aPNJmW5&oh=00_AYC6kyqJE5ycoTC6C9_oa7NLu9XescTrmX08foFIvRKxng&oe=676D9D0E"
+              }
+            ],
+            "text": {
+              "title": "Ready to Elevate Your Skiing Skills?",
+              "body": "Book your instructor today",
+              "description": "Our certified instructors are ready to guide you through Harrachov's breathtaking slopes"
+            },
+            "urls": [
+              {
+                "website": "https://www.classicskischool.cz/en/?id={{campaign.id}}",
+                "display": "www.classicskischool.cz/en/"
+              }
+            ],
+            "placements": [],
+            "callToAction": "CONTACT_US",
+            "pages": {
+              "facebook": "133539183473160",
+              "instagram": "1122505601195676"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

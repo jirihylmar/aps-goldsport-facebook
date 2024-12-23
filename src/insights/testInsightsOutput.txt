@@ -1,0 +1,117 @@
+=== Testing Facebook Campaign Insights ===
+
+Test 1: Getting campaign list with IDs
+Campaign List: {
+  "data": [
+    {
+      "campaign_id": "120214861308510063",
+      "campaign_name": "2024-12-12_ski_instructors_are_waiting_for_you__ski_opening",
+      "impressions": "2602",
+      "clicks": "24",
+      "spend": "338.4",
+      "date_start": "2024-12-14",
+      "date_stop": "2024-12-20"
+    },
+    {
+      "campaign_id": "120214867158120063",
+      "campaign_name": "2024-12-12_dual_interest_winter_sports__ski_opening",
+      "impressions": "4348",
+      "clicks": "10",
+      "spend": "355.51",
+      "date_start": "2024-12-14",
+      "date_stop": "2024-12-20"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "MAZDZD",
+      "after": "MQZDZD"
+    }
+  }
+}
+
+Test 2: Getting specific campaign details
+Testing campaign: 2024-12-12_ski_instructors_are_waiting_for_you__ski_opening
+Specific Campaign Insights: {
+  "data": [
+    {
+      "campaign_name": "2024-12-12_ski_instructors_are_waiting_for_you__ski_opening",
+      "impressions": "2602",
+      "clicks": "24",
+      "spend": "338.4",
+      "reach": "1329",
+      "cpc": "14.1",
+      "ctr": "0.922367",
+      "unique_clicks": "23",
+      "date_start": "2024-12-14",
+      "date_stop": "2024-12-20"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "MAZDZD",
+      "after": "MAZDZD"
+    }
+  }
+}
+
+Campaign Performance Summary:
+
+Campaign: 2024-12-12_ski_instructors_are_waiting_for_you__ski_opening
+- Impressions: 2602
+- Clicks: 24
+- Spend: 338.4
+- Reach: 1329
+- CPC: 14.1
+- CTR: 0.922367%
+- Unique Clicks: 23
+
+Test 3: Comparing campaign performance
+Campaigns Comparison: {
+  "data": [
+    {
+      "campaign_name": "2024-12-12_ski_instructors_are_waiting_for_you__ski_opening",
+      "impressions": "2602",
+      "reach": "1329",
+      "clicks": "24",
+      "spend": "338.4",
+      "cpc": "14.1",
+      "ctr": "0.922367",
+      "date_start": "2024-12-14",
+      "date_stop": "2024-12-20"
+    },
+    {
+      "campaign_name": "2024-12-12_dual_interest_winter_sports__ski_opening",
+      "impressions": "4348",
+      "reach": "2585",
+      "clicks": "10",
+      "spend": "355.51",
+      "cpc": "35.551",
+      "ctr": "0.229991",
+      "date_start": "2024-12-14",
+      "date_stop": "2024-12-20"
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "MAZDZD",
+      "after": "MQZDZD"
+    }
+  }
+}
+
+Campaigns Comparison Summary:
+
+Campaign: 2024-12-12_ski_instructors_are_waiting_for_you__ski_opening
+- Impressions: 2602
+- Clicks: 24
+- Spend: 338.4
+- CTR: 0.922367%
+- CPC: 14.1
+
+Campaign: 2024-12-12_dual_interest_winter_sports__ski_opening
+- Impressions: 4348
+- Clicks: 10
+- Spend: 355.51
+- CTR: 0.229991%
+- CPC: 35.551

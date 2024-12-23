@@ -1,0 +1,15 @@
+=== Knowledge Base File Index ===
+
+Size (KB) | Original Path -> Knowledge Base Filename
+------------------------------------------------
+src_utils_fbConfig.js_0001 KB | src/utils/fbConfig.js/0001KB -> src_utils_fbConfig.js_0001KB.txt
+src_runners_fetchDetails.js_0012 KB | src/runners/fetchDetails.js/0012KB -> src_runners_fetchDetails.js_0012KB.txt
+src_output_campaign_120215151271950063_2024-12-21T20-19-04-231Z_summary.json_0008 KB | src/output/campaign/120215151271950063/2024-12-21T20-19-04-231Z/summary.json/0008KB -> src_output_campaign_120215151271950063_2024-12-21T20-19-04-231Z_summary.json_0008KB.txt
+src_output_campaign_120215151271950063_2024-12-21T20-19-04-231Z_details.json_0014 KB | src/output/campaign/120215151271950063/2024-12-21T20-19-04-231Z/details.json/0014KB -> src_output_campaign_120215151271950063_2024-12-21T20-19-04-231Z_details.json_0014KB.txt
+src_insights_testInsights.js_0008 KB | src/insights/testInsights.js/0008KB -> src_insights_testInsights.js_0008KB.txt
+src_fetchers_campaign_campaignDetailsFetcher.js_0003 KB | src/fetchers/campaign/campaignDetailsFetcher.js/0003KB -> src_fetchers_campaign_campaignDetailsFetcher.js_0003KB.txt
+src_fetchers_base_baseFetcher.js_0003 KB | src/fetchers/base/baseFetcher.js/0003KB -> src_fetchers_base_baseFetcher.js_0003KB.txt
+src_fetchers_adset_adsetDetailsFetcher.js_0002 KB | src/fetchers/adset/adsetDetailsFetcher.js/0002KB -> src_fetchers_adset_adsetDetailsFetcher.js_0002KB.txt
+src_fetchers_ad_adDetailsFetcher.js_0006 KB | src/fetchers/ad/adDetailsFetcher.js/0006KB -> src_fetchers_ad_adDetailsFetcher.js_0006KB.txt
+readme.md_0005 KB | readme.md/0005KB -> readme.md_0005KB.txt
+package.json_0001 KB | package.json/0001KB -> package.json_0001KB.txt
