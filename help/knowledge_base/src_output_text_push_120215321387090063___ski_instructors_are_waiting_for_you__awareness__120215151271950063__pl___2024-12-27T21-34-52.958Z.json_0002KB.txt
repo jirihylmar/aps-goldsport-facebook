@@ -1,0 +1,45 @@
+=== File: src/output/text_push_120215321387090063___ski_instructors_are_waiting_for_you__awareness__120215151271950063__pl___2024-12-27T21-34-52.958Z.json ===
+=== Size: 2KB ===
+
+{
+  "adId": "120215321387090063",
+  "adName": "ski_instructors_are_waiting_for_you__awareness__120215151271950063__pl",
+  "timestamp": "2024-12-27T21-34-52.958Z",
+  "textsFile": "/home/hylmarj/doc-digital-horizon-goldsport/data/ski_instructors_are_waiting_for_you/texts.json",
+  "language": "pl",
+  "updatedTexts": [
+    {
+      "primary_text": "Twoja zimowa przygoda zaczyna się tutaj",
+      "headline": "Twoja zimowa przygoda",
+      "description": "Nasi certyfikowani instruktorzy są gotowi poprowadzić Cię po malowniczych stokach Harrachova",
+      "hashtags": [
+        "#HarrachovSki",
+        "#SzkolaNarciarstwa",
+        "#SportyZimowe"
+      ]
+    },
+    {
+      "primary_text": "Doświadczenie w każdym skręcie",
+      "headline": "Dołącz do naszych instruktorów",
+      "description": "Dołącz do naszych profesjonalnych instruktorów i przeżyj niezapomniane chwile w Harrachovie",
+      "hashtags": [
+        "#SkiHarrachov",
+        "#ZimowaPrzygoda",
+        "#SzkolaNarciarstwa"
+      ]
+    },
+    {
+      "primary_text": "Gotów podnieść swoje umiejętności?",
+      "headline": "Gotów podnieść swoje umiejętności?",
+      "description": "Nasi eksperci czekają, by podzielić się swoją pasją do narciarstwa na najlepszych stokach Harrachova",
+      "hashtags": [
+        "#HarrachovLife",
+        "#NaukaJazdy",
+        "#ZimowaSzkolenia"
+      ]
+    }
+  ],
+  "apiResponse": {
+    "success": true
+  }
+}

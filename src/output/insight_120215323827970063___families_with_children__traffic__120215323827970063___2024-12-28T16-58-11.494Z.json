@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "fetchedAt": "2024-12-28T17:09:16.450Z",
+    "activeOnly": true
+  },
+  "campaign": {
+    "id": "120215323827970063",
+    "name": "families_with_children__traffic__120215323827970063",
+    "status": "ACTIVE",
+    "effectiveStatus": "ACTIVE",
+    "insights": [
+      {
+        "impressions": "1",
+        "clicks": "1",
+        "spend": "0.12",
+        "reach": "1",
+        "cpc": "0.12",
+        "ctr": "100",
+        "unique_clicks": "1",
+        "date_start": "2024-11-28",
+        "date_stop": "2024-12-27"
+      }
+    ]
+  },
+  "adSets": [
+    {
+      "id": "120215323828030063",
+      "name": "families_with_children__traffic__120215323827970063__de",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215323828020063",
+      "name": "families_with_children__traffic__120215323827970063__en",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215323828010063",
+      "name": "families_with_children__traffic__120215323827970063__cs",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": [
+        {
+          "impressions": "1",
+          "clicks": "1",
+          "spend": "0.12",
+          "reach": "1",
+          "cpc": "0.12",
+          "ctr": "100",
+          "unique_clicks": "1",
+          "date_start": "2024-11-28",
+          "date_stop": "2024-12-27"
+        }
+      ]
+    },
+    {
+      "id": "120215323827950063",
+      "name": "families_with_children__traffic__120215323827970063__pl",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    }
+  ],
+  "ads": [
+    {
+      "id": "120215323827980063",
+      "name": "families_with_children__traffic__120215323827970063__pl",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215323828000063",
+      "name": "families_with_children__traffic__120215323827970063__de",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215323827990063",
+      "name": "families_with_children__traffic__120215323827970063__en",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215323827960063",
+      "name": "families_with_children__traffic__120215323827970063__cs",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": [
+        {
+          "impressions": "1",
+          "clicks": "1",
+          "spend": "0.12",
+          "reach": "1",
+          "cpc": "0.12",
+          "ctr": "100",
+          "unique_clicks": "1",
+          "date_start": "2024-11-28",
+          "date_stop": "2024-12-27"
+        }
+      ]
+    }
+  ]
+}

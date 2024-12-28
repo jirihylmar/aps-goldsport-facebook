@@ -1,7 +1,13 @@
-=== File: readme.md ===
-=== Size: 5KB ===
+=== File: README.md ===
+=== Size: 4KB ===
 
 # Facebook Marketing API SDK
+
+Example usage
+
+``` bash
+cd $HOME/aps-goldsport-facebook/src/runners; node fetchDetails.js ski_instructors_are_waiting_for_you__awareness__120215151271950063
+```
 
 Node.js SDK for Facebook Marketing API integration. This toolkit provides functionality for managing Facebook Ad campaigns, including insights retrieval, ad creation, and campaign management.
 
@@ -149,9 +155,8 @@ Development:
 - ADS MANAGER: https://adsmanager.facebook.com/adsmanager/manage/accounts?act=1609138539679924&business_id=1714956209349952
 
 ### API Documentation
-- [Marketing API Documentation](https://developers.facebook.com/docs/marketing-apis/)
-- [Campaign Management](https://developers.facebook.com/docs/marketing-api/campaign-management)
-- [Insights API](https://developers.facebook.com/docs/marketing-api/insights)
+- [Marketing API Documentation](https://developers.facebook.com/docs/marketing-apis)
+
 
 ## Contributing
 
@@ -167,19 +172,7 @@ Development:
 
 ## Coming Soon
 
-### Campaign Management
-- Campaign creation
-- Budget management
-- Schedule optimization
-
-### Ad Management
-- Ad creation
-- Creative upload
-- Performance tracking
-
-### Reporting
 - Automated reports
 - Custom metrics
 - Data visualization
 
-Stay tuned for updates and new features!

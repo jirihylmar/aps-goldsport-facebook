@@ -1,0 +1,42 @@
+{
+  "adId": "120215321405500063",
+  "adName": "ski_instructors_are_waiting_for_you__awareness__120215151271950063__de",
+  "timestamp": "2024-12-27T21-34-41.867Z",
+  "textsFile": "/home/hylmarj/doc-digital-horizon-goldsport/data/ski_instructors_are_waiting_for_you/texts.json",
+  "language": "de",
+  "updatedTexts": [
+    {
+      "primary_text": "Ihr Winterabenteuer beginnt hier",
+      "headline": "Ihr Winterabenteuer",
+      "description": "Unsere zertifizierten Skilehrer freuen sich darauf, Sie durch Harrachovs traumhafte Pisten zu führen",
+      "hashtags": [
+        "#HarrachovSki",
+        "#Skischule",
+        "#Wintersport"
+      ]
+    },
+    {
+      "primary_text": "Erfahrung zählt bei jedem Schwung",
+      "headline": "Erleben Sie unvergessliche Wintermomente",
+      "description": "Erleben Sie unvergessliche Wintermomente mit unseren professionellen Skilehrern in Harrachov",
+      "hashtags": [
+        "#SkiHarrachov",
+        "#Winterabenteuer",
+        "#Skischule"
+      ]
+    },
+    {
+      "primary_text": "Bereit für neue Ski-Horizonte?",
+      "headline": "Bereit für neue Ski-Horizonte?",
+      "description": "Unsere Experten teilen ihre Leidenschaft fürs Skifahren auf Harrachovs besten Pisten",
+      "hashtags": [
+        "#HarrachovLeben",
+        "#Skiunterricht",
+        "#Winterfreude"
+      ]
+    }
+  ],
+  "apiResponse": {
+    "success": true
+  }
+}

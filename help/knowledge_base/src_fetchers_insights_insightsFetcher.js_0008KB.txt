@@ -1,4 +1,4 @@
-=== File: src/insights/testInsights.js ===
+=== File: src/fetchers/insights/insightsFetcher.js ===
 === Size: 8KB ===
 
 // testInsights.js

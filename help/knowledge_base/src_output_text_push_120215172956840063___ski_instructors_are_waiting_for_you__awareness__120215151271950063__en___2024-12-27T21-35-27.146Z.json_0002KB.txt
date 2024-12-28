@@ -1,0 +1,45 @@
+=== File: src/output/text_push_120215172956840063___ski_instructors_are_waiting_for_you__awareness__120215151271950063__en___2024-12-27T21-35-27.146Z.json ===
+=== Size: 2KB ===
+
+{
+  "adId": "120215172956840063",
+  "adName": "ski_instructors_are_waiting_for_you__awareness__120215151271950063__en",
+  "timestamp": "2024-12-27T21-35-27.146Z",
+  "textsFile": "/home/hylmarj/doc-digital-horizon-goldsport/data/ski_instructors_are_waiting_for_you/texts.json",
+  "language": "en",
+  "updatedTexts": [
+    {
+      "primary_text": "Your Perfect Winter Adventure Starts Here",
+      "headline": "Your Perfect Winter Adventure",
+      "description": "Our certified instructors are ready to guide you through Harrachov's breathtaking slopes",
+      "hashtags": [
+        "#HarrachovSki",
+        "#SkiLessons",
+        "#WinterSports"
+      ]
+    },
+    {
+      "primary_text": "Experience Matters in Every Turn",
+      "headline": "Join our professional ski instructors",
+      "description": "Join our professional ski instructors for an unforgettable winter experience in Harrachov",
+      "hashtags": [
+        "#SkiHarrachov",
+        "#WinterAdventure",
+        "#SkiSchool"
+      ]
+    },
+    {
+      "primary_text": "Ready to Elevate Your Skiing Skills?",
+      "headline": "Ready to Elevate Your Skiing Skills?",
+      "description": "Our expert instructors await to share their passion for skiing on Harrachov's finest slopes",
+      "hashtags": [
+        "#HarrachovLife",
+        "#SkiInstruction",
+        "#WinterFun"
+      ]
+    }
+  ],
+  "apiResponse": {
+    "success": true
+  }
+}

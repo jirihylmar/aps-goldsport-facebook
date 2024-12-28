@@ -1,5 +1,5 @@
 === File: src/runners/fetchDetails.js ===
-=== Size: 12KB ===
+=== Size: 8KB ===
 
 // fetchDetails.js
 const CampaignDetailsFetcher = require('../fetchers/campaign/campaignDetailsFetcher');
@@ -197,130 +197,22 @@ class DetailsFetcher {
         }
     }
 
-    _generateSummary(results) {
-        // Process campaign details
-        const campaign = {
-            basic: {
-                id: results.campaign.id,
-                name: results.campaign.name,
-                status: results.campaign.status,
-                objective: results.campaign.objective,
-                special_ad_categories: results.campaign.special_ad_categories || []
-            },
-            timing: {
-                created: results.campaign.created_time,
-                updated: results.campaign.updated_time,
-                start: results.campaign.start_time,
-                end: results.campaign.stop_time
-            },
-            budget: {
-                daily: results.campaign.daily_budget,
-                lifetime: results.campaign.lifetime_budget,
-                remaining: results.campaign.budget_remaining
-            }
-        };
-
-        // Process ad sets
-        const adSets = results.adSets.map(adSet => ({
-            id: adSet.id,
-            name: adSet.name,
-            status: adSet.status,
-            targeting: {
-                demographics: {
-                    age: {
-                        min: adSet.targeting?.targeting?.age_min,
-                        max: adSet.targeting?.targeting?.age_max
-                    },
-                    locales: adSet.targeting?.targeting?.locales
-                },
-                locations: adSet.targeting?.targeting?.geo_locations,
-                excluded_audiences: adSet.targeting?.targeting?.excluded_custom_audiences?.map(aud => ({
-                    id: aud.id,
-                    name: aud.name
-                }))
-            },
-            optimization: {
-                goal: adSet.targeting?.optimization_goal,
-                billing: adSet.targeting?.billing_event
-            },
-            budget: {
-                daily: adSet.scheduleAndBudget?.daily_budget,
-                lifetime: adSet.scheduleAndBudget?.lifetime_budget
-            },
-            schedule: {
-                start: adSet.scheduleAndBudget?.start_time,
-                end: adSet.scheduleAndBudget?.end_time
-            }
-        }));
-
-        // Process ads and their creatives
-        const ads = results.ads.map(ad => ({
-            id: ad.id,
-            name: ad.name,
-            status: ad.status,
-            creative: {
-                id: ad.creative?.id,
-                content: ad.media?.content
-            }
-        }));
-
-        // Compile final summary
-        return {
-            campaign,
-            statistics: {
-                counts: {
-                    adSets: adSets.length,
-                    ads: ads.length
-                },
-                status: {
-                    campaign: campaign.basic.status,
-                    adSets: adSets.reduce((acc, as) => {
-                        acc[as.status] = (acc[as.status] || 0) + 1;
-                        return acc;
-                    }, {}),
-                    ads: ads.reduce((acc, ad) => {
-                        acc[ad.status] = (acc[ad.status] || 0) + 1;
-                        return acc;
-                    }, {})
-                }
-            },
-            targeting: {
-                locations: Array.from(new Set(adSets.flatMap(as => 
-                    as.targeting.locations?.cities?.map(c => c.name) || []
-                ))),
-                ages: {
-                    min: Math.min(...adSets.map(as => as.targeting.demographics.age.min).filter(Boolean)),
-                    max: Math.max(...adSets.map(as => as.targeting.demographics.age.max).filter(Boolean))
-                }
-            },
-            details: {
-                adSets,
-                ads
-            }
-        };
-    }
-
     async _saveResults(campaignId, results) {
         try {
             await fs.mkdir(this.outputDir, { recursive: true });
 
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-            const baseFilename = `campaign_${campaignId}_${timestamp}`;
+            // Sanitize campaign name to be filename-safe (replace spaces and special chars with underscores)
+            const safeNameFormat = results.campaign.name.replace(/[^a-zA-Z0-9]/g, '_');
+            const filename = `campaign_${campaignId}___${safeNameFormat}___${timestamp}___details.json`;
 
             // Save detailed results
-            const detailsPath = path.join(this.outputDir, `${baseFilename}_details.json`);
+            const detailsPath = path.join(this.outputDir, filename);
             await fs.writeFile(detailsPath, JSON.stringify(results, null, 2));
 
-            // Generate and save summary
-            const summary = this._generateSummary(results);
-            const summaryPath = path.join(this.outputDir, `${baseFilename}_summary.json`);
-            await fs.writeFile(summaryPath, JSON.stringify(summary, null, 2));
+            console.log(`\nFile saved: ${detailsPath}`);
 
-            console.log(`\nFiles saved:`);
-            console.log(`- Details: ${detailsPath}`);
-            console.log(`- Summary: ${summaryPath}`);
-
-            return { detailsPath, summaryPath };
+            return { detailsPath };
         } catch (error) {
             console.error('Error saving results:', error);
             throw error;

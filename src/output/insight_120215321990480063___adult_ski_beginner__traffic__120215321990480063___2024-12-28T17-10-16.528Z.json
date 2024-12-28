@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "fetchedAt": "2024-12-28T17:21:28.290Z",
+    "activeOnly": true
+  },
+  "campaign": {
+    "id": "120215321990480063",
+    "name": "adult_ski_beginner__traffic__120215321990480063",
+    "status": "ACTIVE",
+    "effectiveStatus": "ACTIVE",
+    "insights": [
+      {
+        "impressions": "36",
+        "clicks": "0",
+        "spend": "2.19",
+        "reach": "36",
+        "ctr": "0",
+        "date_start": "2024-11-28",
+        "date_stop": "2024-12-27"
+      }
+    ]
+  },
+  "adSets": [
+    {
+      "id": "120215321990560063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__de",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215321990550063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__en",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": [
+        {
+          "impressions": "19",
+          "clicks": "0",
+          "spend": "1.15",
+          "reach": "19",
+          "ctr": "0",
+          "date_start": "2024-11-28",
+          "date_stop": "2024-12-27"
+        }
+      ]
+    },
+    {
+      "id": "120215321990530063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__pl",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215321990490063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__cs",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": [
+        {
+          "impressions": "17",
+          "clicks": "0",
+          "spend": "1.04",
+          "reach": "17",
+          "ctr": "0",
+          "date_start": "2024-11-28",
+          "date_stop": "2024-12-27"
+        }
+      ]
+    }
+  ],
+  "ads": [
+    {
+      "id": "120215321990510063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__cs",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": [
+        {
+          "impressions": "17",
+          "clicks": "0",
+          "spend": "1.04",
+          "reach": "17",
+          "ctr": "0",
+          "date_start": "2024-11-28",
+          "date_stop": "2024-12-27"
+        }
+      ]
+    },
+    {
+      "id": "120215321990520063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__pl",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    },
+    {
+      "id": "120215321990500063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__en",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": [
+        {
+          "impressions": "19",
+          "clicks": "0",
+          "spend": "1.15",
+          "reach": "19",
+          "ctr": "0",
+          "date_start": "2024-11-28",
+          "date_stop": "2024-12-27"
+        }
+      ]
+    },
+    {
+      "id": "120215321990540063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__de",
+      "status": "ACTIVE",
+      "effectiveStatus": "ACTIVE",
+      "insights": []
+    }
+  ]
+}
