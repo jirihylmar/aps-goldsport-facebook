@@ -1,0 +1,2111 @@
+{
+  "campaign": {
+    "id": "120215321990480063",
+    "name": "adult_ski_beginner__traffic__120215321990480063",
+    "objective": "OUTCOME_TRAFFIC",
+    "status": "ACTIVE",
+    "special_ad_categories": [],
+    "budget_remaining": "0",
+    "start_time": "2024-12-27T21:31:37+0100",
+    "updated_time": "2024-12-27T23:26:07+0100",
+    "created_time": "2024-12-27T21:31:36+0100",
+    "insights": {},
+    "_missingFields": []
+  },
+  "adSets": [
+    {
+      "id": "120215321990560063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__de",
+      "status": "ACTIVE",
+      "targeting": {
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "age_range": [
+            25,
+            64
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120214862440040063",
+              "name": "FB-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120214862452840063",
+              "name": "IG-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120215057344580063",
+              "name": "video__all__ski_openning__25p__365"
+            },
+            {
+              "id": "120215423727180063",
+              "name": "post_ad__engagement__campaigns__365"
+            }
+          ],
+          "genders": [
+            0
+          ],
+          "geo_locations": {
+            "cities": [
+              {
+                "country": "CZ",
+                "distance_unit": "mile",
+                "key": "520595",
+                "name": "Harrachov",
+                "region": "Liberec Region",
+                "region_id": "817"
+              }
+            ],
+            "custom_locations": [
+              {
+                "name": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "address_string": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "distance_unit": "mile",
+                "latitude": 50.75303,
+                "longitude": 15.3639,
+                "radius": 1,
+                "primary_city_id": 523787,
+                "region_id": 817,
+                "country": "CZ"
+              }
+            ],
+            "places": [
+              {
+                "key": "283146421707515",
+                "name": "Szklarska Poręba",
+                "distance_unit": "mile",
+                "latitude": 50.826574967503,
+                "longitude": 15.522699608908,
+                "radius": 1,
+                "primary_city_id": 1879246,
+                "region_id": 2993,
+                "country": "PL"
+              }
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "brand_safety_content_filter_levels": [
+            "FACEBOOK_STANDARD",
+            "AN_STANDARD"
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        },
+        "optimization_goal": "LINK_CLICKS",
+        "billing_event": "IMPRESSIONS",
+        "id": "120215321990560063"
+      },
+      "scheduleAndBudget": {
+        "start_time": "2024-12-27T21:36:50+0100",
+        "daily_budget": "12500",
+        "lifetime_budget": "0",
+        "optimization_goal": "LINK_CLICKS",
+        "id": "120215321990560063"
+      },
+      "ads": [
+        {
+          "id": "120215321990540063",
+          "name": "adult_ski_beginner__traffic__120215321990480063__de",
+          "status": "ACTIVE",
+          "creative": {
+            "id": "120215326402760063"
+          },
+          "media": {
+            "id": "120215326402760063",
+            "name": "{{product.name}} 2024-12-27-dc6a4287a652daf1d4fb5bd32ce279b6",
+            "content": {
+              "media": [
+                {
+                  "type": "image",
+                  "hash": "629a9f5287e2fbc37af8303de5a1651b",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fd75ae3d592fd9951_1735331981882",
+                      "id": "120215322198000063"
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "hash": "4458eb0210a2ac823d9291b7701fddc8",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fed59d515b1d1207c_1735331972453",
+                      "id": "120215322196480063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "963482305658268",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYA4T2eeA3ow8JDpwPttXoVHQ3vyBDBOdgPvb5y9ChAYog&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f4d266289bd408b91_1735331963246",
+                      "id": "120215322194160063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1769970593836488",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYAQrB_M6zG8tBdEQXrsUbXrdXhi04jN74fCdcU7AG8uOQ&oe=677ECE37",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f7eb6b569cffc8100_1735331963258",
+                      "id": "120215322194180063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1935356310287211",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYC3ktj5S6A9_u6BQG7TBs3USHocsfX3hSajclgxpzVo2w&oe=677EF8CE",
+                  "labels": [
+                    {
+                      "name": "placement_asset_ff734c0e8a08e7160_1735331963238",
+                      "id": "120215322194200063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "947172350808979",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYA4T2eeA3ow8JDpwPttXoVHQ3vyBDBOdgPvb5y9ChAYog&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f4b576b6d347887e5_1735333866022",
+                      "id": "120215323320320063"
+                    }
+                  ]
+                }
+              ],
+              "text": {
+                "title": "Skifahren lernen - in jedem Alter",
+                "body": "Verwandeln Sie Winter in Ihr Vergnügen",
+                "description": "Professionelle Lehrer, individueller Unterricht & 30 Jahre Erfahrung. Jetzt starten!"
+              },
+              "urls": [
+                {
+                  "website": "https://www.classicskischool.cz/de/",
+                  "display": "www.classicskischool.cz/de/",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f79e407e1a9ae0d6f_1735331963251",
+                      "id": "120215322194090063"
+                    },
+                    {
+                      "name": "placement_asset_f92118280920c9642_1735331963240",
+                      "id": "120215322194170063"
+                    },
+                    {
+                      "name": "placement_asset_fcee9bfe237922c42_1735331963266",
+                      "id": "120215322194190063"
+                    },
+                    {
+                      "name": "placement_asset_f192906d0d0777150_1735331972454",
+                      "id": "120215322196510063"
+                    },
+                    {
+                      "name": "placement_asset_f11826d2452dcca85_1735331981883",
+                      "id": "120215322198020063"
+                    },
+                    {
+                      "name": "placement_asset_fcb46ad958bd1aa79_1735333866023",
+                      "id": "120215323320340063"
+                    }
+                  ]
+                }
+              ],
+              "placements": [
+                {
+                  "priority": 1,
+                  "platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "facebook_reels",
+                      "facebook_reels_overlay",
+                      "story"
+                    ],
+                    "instagram": [
+                      "story",
+                      "reels"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 2,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 3,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "right_hand_column"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 4,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "ig_search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 5,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "explore_home"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 6,
+                  "positions": {},
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                }
+              ],
+              "callToAction": "CONTACT_US",
+              "pages": {
+                "facebook": "133539183473160",
+                "instagram": "1122505601195676"
+              }
+            }
+          },
+          "_missingFields": []
+        }
+      ],
+      "_missingFields": []
+    },
+    {
+      "id": "120215321990550063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__en",
+      "status": "ACTIVE",
+      "targeting": {
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "age_range": [
+            25,
+            64
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120214862440040063",
+              "name": "FB-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120214862452840063",
+              "name": "IG-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120215057344580063",
+              "name": "video__all__ski_openning__25p__365"
+            },
+            {
+              "id": "120215423727180063",
+              "name": "post_ad__engagement__campaigns__365"
+            }
+          ],
+          "genders": [
+            0
+          ],
+          "geo_locations": {
+            "cities": [
+              {
+                "country": "CZ",
+                "distance_unit": "mile",
+                "key": "520595",
+                "name": "Harrachov",
+                "region": "Liberec Region",
+                "region_id": "817"
+              }
+            ],
+            "custom_locations": [
+              {
+                "name": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "address_string": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "distance_unit": "mile",
+                "latitude": 50.75303,
+                "longitude": 15.3639,
+                "radius": 1,
+                "primary_city_id": 523787,
+                "region_id": 817,
+                "country": "CZ"
+              }
+            ],
+            "places": [
+              {
+                "key": "283146421707515",
+                "name": "Szklarska Poręba",
+                "distance_unit": "mile",
+                "latitude": 50.826574967503,
+                "longitude": 15.522699608908,
+                "radius": 1,
+                "primary_city_id": 1879246,
+                "region_id": 2993,
+                "country": "PL"
+              }
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "brand_safety_content_filter_levels": [
+            "FACEBOOK_STANDARD",
+            "AN_STANDARD"
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        },
+        "optimization_goal": "LINK_CLICKS",
+        "billing_event": "IMPRESSIONS",
+        "id": "120215321990550063"
+      },
+      "scheduleAndBudget": {
+        "start_time": "2024-12-27T21:44:10+0100",
+        "daily_budget": "12500",
+        "lifetime_budget": "0",
+        "optimization_goal": "LINK_CLICKS",
+        "id": "120215321990550063"
+      },
+      "ads": [
+        {
+          "id": "120215321990500063",
+          "name": "adult_ski_beginner__traffic__120215321990480063__en",
+          "status": "ACTIVE",
+          "creative": {
+            "id": "120215326448000063"
+          },
+          "media": {
+            "id": "120215326448000063",
+            "name": "{{product.name}} 2024-12-27-c7aefbf88f74550d3c439f6e14d0e5c9",
+            "content": {
+              "media": [
+                {
+                  "type": "image",
+                  "hash": "629a9f5287e2fbc37af8303de5a1651b",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f8616f44166cad1d6_1735332214989",
+                      "id": "120215322238850063"
+                    },
+                    {
+                      "name": "placement_asset_fe83fad6fd7328ab6_1735332229808",
+                      "id": "120215322241220063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "9003826609682278",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYDONNwEWPOxmpMUWoYS59nQgvUxt4hhjb3afC8zqsZsoQ&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fc54b6e614d16db12_1735332209217",
+                      "id": "120215322236470063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "895531836121876",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYDly8ah2Q9EmnE0uu80Le4YSL1CcM9y30aCnb3OkNZoGw&oe=677ECE37",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fb774b68616b2f076_1735332209226",
+                      "id": "120215322236380063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1661461448129291",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYD3HOQDKXmWCr7U6KGh_ll7gmkfLjKcypJjlAYOH_CJaA&oe=677EF8CE",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f1d7360d9db4c906d_1735332209208",
+                      "id": "120215322236460063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1776860846186906",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYDONNwEWPOxmpMUWoYS59nQgvUxt4hhjb3afC8zqsZsoQ&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f31cdd6ecd82042ad_1735333849983",
+                      "id": "120215323310410063"
+                    }
+                  ]
+                }
+              ],
+              "text": {
+                "title": "Learn to Ski at Any Age",
+                "body": "Transform Winter into Your Playground",
+                "description": "Expert instructors, personalized lessons & 30 years of experience. Start your ski adventure now!"
+              },
+              "urls": [
+                {
+                  "website": "https://www.classicskischool.cz/en/",
+                  "display": "www.classicskischool.cz/en/",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fd0e722f87f41190b_1735332209231",
+                      "id": "120215322236370063"
+                    },
+                    {
+                      "name": "placement_asset_f3f44c09133c050b0_1735332209213",
+                      "id": "120215322236440063"
+                    },
+                    {
+                      "name": "placement_asset_f1db699da27ab0b7c_1735332209222",
+                      "id": "120215322236480063"
+                    },
+                    {
+                      "name": "placement_asset_fc560ff4a1f453dd5_1735332214989",
+                      "id": "120215322238830063"
+                    },
+                    {
+                      "name": "placement_asset_f195ef2770d546855_1735332229811",
+                      "id": "120215322241210063"
+                    },
+                    {
+                      "name": "placement_asset_fa88ac2de5c66a6ec_1735333849984",
+                      "id": "120215323310390063"
+                    }
+                  ]
+                }
+              ],
+              "placements": [
+                {
+                  "priority": 1,
+                  "platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "facebook_reels",
+                      "facebook_reels_overlay",
+                      "story"
+                    ],
+                    "instagram": [
+                      "story",
+                      "reels"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 2,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 3,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "right_hand_column"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 4,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "ig_search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 5,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "explore_home"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 6,
+                  "positions": {},
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                }
+              ],
+              "callToAction": "LEARN_MORE",
+              "pages": {
+                "facebook": "133539183473160",
+                "instagram": "1122505601195676"
+              }
+            }
+          },
+          "_missingFields": []
+        }
+      ],
+      "_missingFields": []
+    },
+    {
+      "id": "120215321990530063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__pl",
+      "status": "ACTIVE",
+      "targeting": {
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "age_range": [
+            25,
+            64
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120214862440040063",
+              "name": "FB-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120214862452840063",
+              "name": "IG-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120215057344580063",
+              "name": "video__all__ski_openning__25p__365"
+            },
+            {
+              "id": "120215423727180063",
+              "name": "post_ad__engagement__campaigns__365"
+            }
+          ],
+          "genders": [
+            0
+          ],
+          "geo_locations": {
+            "cities": [
+              {
+                "country": "CZ",
+                "distance_unit": "mile",
+                "key": "520595",
+                "name": "Harrachov",
+                "region": "Liberec Region",
+                "region_id": "817"
+              }
+            ],
+            "custom_locations": [
+              {
+                "name": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "address_string": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "distance_unit": "mile",
+                "latitude": 50.75303,
+                "longitude": 15.3639,
+                "radius": 1,
+                "primary_city_id": 523787,
+                "region_id": 817,
+                "country": "CZ"
+              }
+            ],
+            "places": [
+              {
+                "key": "283146421707515",
+                "name": "Szklarska Poręba",
+                "distance_unit": "mile",
+                "latitude": 50.826574967503,
+                "longitude": 15.522699608908,
+                "radius": 1,
+                "primary_city_id": 1879246,
+                "region_id": 2993,
+                "country": "PL"
+              }
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "brand_safety_content_filter_levels": [
+            "FACEBOOK_STANDARD",
+            "AN_STANDARD"
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        },
+        "optimization_goal": "LINK_CLICKS",
+        "billing_event": "IMPRESSIONS",
+        "id": "120215321990530063"
+      },
+      "scheduleAndBudget": {
+        "start_time": "2024-12-27T21:46:59+0100",
+        "daily_budget": "12500",
+        "lifetime_budget": "0",
+        "optimization_goal": "LINK_CLICKS",
+        "id": "120215321990530063"
+      },
+      "ads": [
+        {
+          "id": "120215321990520063",
+          "name": "adult_ski_beginner__traffic__120215321990480063__pl",
+          "status": "ACTIVE",
+          "creative": {
+            "id": "120215409720570063"
+          },
+          "media": {
+            "id": "120215409720570063",
+            "name": "{{product.name}} 2024-12-30-a64f8658e4b9238f3c71fca8672479bd",
+            "content": {
+              "media": [
+                {
+                  "type": "image",
+                  "hash": "629a9f5287e2fbc37af8303de5a1651b",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f4f73a91f4b5af8e2_1735332432707",
+                      "id": "120215322263040063"
+                    },
+                    {
+                      "name": "placement_asset_fe66eb979cffd3f20_1735332444932",
+                      "id": "120215322266500063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1738700026978621",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYBGykyonIzljq7j9VfV0PiSlZgwSUVF86vWgyDxDa1tBw&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fb60b7ae37d46db04_1735332406740",
+                      "id": "120215322259370063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "885469776775097",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYDHJk1uuej4fTw12uLuYfmT5QXluNwh9cAB1oNGYuk-fQ&oe=677ECE37",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fa29767a320eaab91_1735332406753",
+                      "id": "120215322259400063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "579373678138172",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYCzqI15_EAorapgRI_RQnsuIymF3W128DkM9yvR8Kfh5Q&oe=677EF8CE",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f1219d63a3efd97a6_1735332406733",
+                      "id": "120215322259360063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1111381144025908",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYBGykyonIzljq7j9VfV0PiSlZgwSUVF86vWgyDxDa1tBw&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f7fd97e4b7b09cb73_1735333815964",
+                      "id": "120215323300680063"
+                    }
+                  ]
+                }
+              ],
+              "text": {
+                "title": "Nauka narciarstwa w każdym wieku",
+                "body": "Rozpocznij przygodę z nartami już dziś!",
+                "description": "Doświadczeni instruktorzy, indywidualne podejście i 30 lat doświadczenia. Zacznij teraz!"
+              },
+              "urls": [
+                {
+                  "website": "https://www.classicskischool.cz/pl/",
+                  "display": "www.classicskischool.cz/pl/",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fb6a33a22b282fce6_1735332406759",
+                      "id": "120215322259320063"
+                    },
+                    {
+                      "name": "placement_asset_f17b1fde18e1648f7_1735332406747",
+                      "id": "120215322259340063"
+                    },
+                    {
+                      "name": "placement_asset_f87c55e77fd63fafc_1735332406736",
+                      "id": "120215322259390063"
+                    },
+                    {
+                      "name": "placement_asset_f7c53d506ab3e7288_1735332432708",
+                      "id": "120215322263070063"
+                    },
+                    {
+                      "name": "placement_asset_f0cb7b13f99dbcae6_1735332444933",
+                      "id": "120215322266490063"
+                    },
+                    {
+                      "name": "placement_asset_fe617902f7be0aadc_1735333815968",
+                      "id": "120215323300650063"
+                    }
+                  ]
+                }
+              ],
+              "placements": [
+                {
+                  "priority": 1,
+                  "platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "facebook_reels",
+                      "facebook_reels_overlay",
+                      "story"
+                    ],
+                    "instagram": [
+                      "story",
+                      "reels"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 2,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 3,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "right_hand_column"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 4,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "ig_search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 5,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "explore_home"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 6,
+                  "positions": {},
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                }
+              ],
+              "callToAction": "CONTACT_US",
+              "pages": {
+                "facebook": "133539183473160",
+                "instagram": "1122505601195676"
+              }
+            }
+          },
+          "_missingFields": []
+        }
+      ],
+      "_missingFields": []
+    },
+    {
+      "id": "120215321990490063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__cs",
+      "status": "ACTIVE",
+      "targeting": {
+        "targeting": {
+          "age_max": 65,
+          "age_min": 18,
+          "age_range": [
+            25,
+            64
+          ],
+          "excluded_custom_audiences": [
+            {
+              "id": "120214862440040063",
+              "name": "FB-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120214862452840063",
+              "name": "IG-View-Classic-Ski-School-365"
+            },
+            {
+              "id": "120215057344580063",
+              "name": "video__all__ski_openning__25p__365"
+            },
+            {
+              "id": "120215423727180063",
+              "name": "post_ad__engagement__campaigns__365"
+            }
+          ],
+          "genders": [
+            0
+          ],
+          "geo_locations": {
+            "cities": [
+              {
+                "country": "CZ",
+                "distance_unit": "mile",
+                "key": "520595",
+                "name": "Harrachov",
+                "region": "Liberec Region",
+                "region_id": "817"
+              }
+            ],
+            "custom_locations": [
+              {
+                "name": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "address_string": "Kořenov, Korenov, Liberec Region, Czech Republic",
+                "distance_unit": "mile",
+                "latitude": 50.75303,
+                "longitude": 15.3639,
+                "radius": 1,
+                "primary_city_id": 523787,
+                "region_id": 817,
+                "country": "CZ"
+              }
+            ],
+            "places": [
+              {
+                "key": "283146421707515",
+                "name": "Szklarska Poręba",
+                "distance_unit": "mile",
+                "latitude": 50.826574967503,
+                "longitude": 15.522699608908,
+                "radius": 1,
+                "primary_city_id": 1879246,
+                "region_id": 2993,
+                "country": "PL"
+              }
+            ],
+            "location_types": [
+              "home",
+              "recent"
+            ]
+          },
+          "brand_safety_content_filter_levels": [
+            "FACEBOOK_STANDARD",
+            "AN_STANDARD"
+          ],
+          "targeting_automation": {
+            "advantage_audience": 1
+          }
+        },
+        "optimization_goal": "LINK_CLICKS",
+        "billing_event": "IMPRESSIONS",
+        "id": "120215321990490063"
+      },
+      "scheduleAndBudget": {
+        "start_time": "2024-12-27T21:31:37+0100",
+        "daily_budget": "12500",
+        "lifetime_budget": "0",
+        "optimization_goal": "LINK_CLICKS",
+        "id": "120215321990490063"
+      },
+      "ads": [
+        {
+          "id": "120215321990510063",
+          "name": "adult_ski_beginner__traffic__120215321990480063__cs",
+          "status": "ACTIVE",
+          "creative": {
+            "id": "120215326631440063"
+          },
+          "media": {
+            "id": "120215326631440063",
+            "name": "{{product.name}} 2024-12-27-2f980969e5547ed2cf11c2a42b91a118",
+            "content": {
+              "media": [
+                {
+                  "type": "image",
+                  "hash": "629a9f5287e2fbc37af8303de5a1651b",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f231cad2b45038e6a_1735331710910",
+                      "id": "120215322150300063"
+                    },
+                    {
+                      "name": "placement_asset_fe3f2f1ff4f097256_1735331737432",
+                      "id": "120215322154490063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1114413433548064",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYDDOOmpABHG1xwVvSBaL0SnFwZazBcNZoBnKWrVxn8n_w&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f0658c26d5c390189_1735331697156",
+                      "id": "120215322146320063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1675761383039555",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYCghs-vbA9Pl7fuGssttYjJEJpRpE4VAZD_peN0FM4edw&oe=677ECE37",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f6cc34fd96ba586b2_1735331697163",
+                      "id": "120215322146260063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "1124831172647806",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYBSVFK8rVSvX2JK_AI6bCC8k-g1aLxz41nQE6Y8KEFl3A&oe=677EF8CE",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fcef749a7d873d15e_1735331697151",
+                      "id": "120215322146280063"
+                    }
+                  ]
+                },
+                {
+                  "type": "video",
+                  "id": "900751145503277",
+                  "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYDDOOmpABHG1xwVvSBaL0SnFwZazBcNZoBnKWrVxn8n_w&oe=677EE09D",
+                  "labels": [
+                    {
+                      "name": "placement_asset_fefe2d46735c14e05_1735333723904",
+                      "id": "120215323285780063"
+                    }
+                  ]
+                }
+              ],
+              "text": {
+                "title": "Lyžování v každém věku",
+                "body": "Začněte s lyžováním ještě dnes!",
+                "description": "Zkušení instruktoři, osobní přístup a 30 let zkušeností. Začněte své lyžařské dobrodružství!"
+              },
+              "urls": [
+                {
+                  "website": "https://www.classicskischool.cz/",
+                  "display": "www.classicskischool.cz/",
+                  "labels": [
+                    {
+                      "name": "placement_asset_f119768d78aec6c94_1735331697152",
+                      "id": "120215322146230063"
+                    },
+                    {
+                      "name": "placement_asset_f04859e2a5e234a98_1735331697168",
+                      "id": "120215322146290063"
+                    },
+                    {
+                      "name": "placement_asset_f87ca6270e0a7e994_1735331697159",
+                      "id": "120215322146330063"
+                    },
+                    {
+                      "name": "placement_asset_f5abedfce8971eb7b_1735331710910",
+                      "id": "120215322150270063"
+                    },
+                    {
+                      "name": "placement_asset_f798e15d3e9f41bfb_1735331737433",
+                      "id": "120215322154480063"
+                    },
+                    {
+                      "name": "placement_asset_fa4ba273af9b159ab_1735333723905",
+                      "id": "120215323285770063"
+                    }
+                  ]
+                }
+              ],
+              "placements": [
+                {
+                  "priority": 1,
+                  "platforms": [
+                    "facebook",
+                    "instagram",
+                    "audience_network",
+                    "messenger"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "facebook_reels",
+                      "facebook_reels_overlay",
+                      "story"
+                    ],
+                    "instagram": [
+                      "story",
+                      "reels"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 2,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 3,
+                  "platforms": [
+                    "facebook"
+                  ],
+                  "positions": {
+                    "facebook": [
+                      "right_hand_column"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 4,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "ig_search"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 5,
+                  "platforms": [
+                    "instagram"
+                  ],
+                  "positions": {
+                    "instagram": [
+                      "explore_home"
+                    ]
+                  },
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                },
+                {
+                  "priority": 6,
+                  "positions": {},
+                  "age": {
+                    "min": 13,
+                    "max": 65
+                  }
+                }
+              ],
+              "callToAction": "CONTACT_US",
+              "pages": {
+                "facebook": "133539183473160",
+                "instagram": "1122505601195676"
+              }
+            }
+          },
+          "_missingFields": []
+        }
+      ],
+      "_missingFields": []
+    }
+  ],
+  "ads": [
+    {
+      "id": "120215321990540063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__de",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "120215326402760063"
+      },
+      "media": {
+        "id": "120215326402760063",
+        "name": "{{product.name}} 2024-12-27-dc6a4287a652daf1d4fb5bd32ce279b6",
+        "content": {
+          "media": [
+            {
+              "type": "image",
+              "hash": "629a9f5287e2fbc37af8303de5a1651b",
+              "labels": [
+                {
+                  "name": "placement_asset_fd75ae3d592fd9951_1735331981882",
+                  "id": "120215322198000063"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "hash": "4458eb0210a2ac823d9291b7701fddc8",
+              "labels": [
+                {
+                  "name": "placement_asset_fed59d515b1d1207c_1735331972453",
+                  "id": "120215322196480063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "963482305658268",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYA4T2eeA3ow8JDpwPttXoVHQ3vyBDBOdgPvb5y9ChAYog&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_f4d266289bd408b91_1735331963246",
+                  "id": "120215322194160063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1769970593836488",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYAQrB_M6zG8tBdEQXrsUbXrdXhi04jN74fCdcU7AG8uOQ&oe=677ECE37",
+              "labels": [
+                {
+                  "name": "placement_asset_f7eb6b569cffc8100_1735331963258",
+                  "id": "120215322194180063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1935356310287211",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYC3ktj5S6A9_u6BQG7TBs3USHocsfX3hSajclgxpzVo2w&oe=677EF8CE",
+              "labels": [
+                {
+                  "name": "placement_asset_ff734c0e8a08e7160_1735331963238",
+                  "id": "120215322194200063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "947172350808979",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=ALvS6eXbWkfSRBkzrYPS5ZT&oh=00_AYA4T2eeA3ow8JDpwPttXoVHQ3vyBDBOdgPvb5y9ChAYog&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_f4b576b6d347887e5_1735333866022",
+                  "id": "120215323320320063"
+                }
+              ]
+            }
+          ],
+          "text": {
+            "title": "Skifahren lernen - in jedem Alter",
+            "body": "Verwandeln Sie Winter in Ihr Vergnügen",
+            "description": "Professionelle Lehrer, individueller Unterricht & 30 Jahre Erfahrung. Jetzt starten!"
+          },
+          "urls": [
+            {
+              "website": "https://www.classicskischool.cz/de/",
+              "display": "www.classicskischool.cz/de/",
+              "labels": [
+                {
+                  "name": "placement_asset_f79e407e1a9ae0d6f_1735331963251",
+                  "id": "120215322194090063"
+                },
+                {
+                  "name": "placement_asset_f92118280920c9642_1735331963240",
+                  "id": "120215322194170063"
+                },
+                {
+                  "name": "placement_asset_fcee9bfe237922c42_1735331963266",
+                  "id": "120215322194190063"
+                },
+                {
+                  "name": "placement_asset_f192906d0d0777150_1735331972454",
+                  "id": "120215322196510063"
+                },
+                {
+                  "name": "placement_asset_f11826d2452dcca85_1735331981883",
+                  "id": "120215322198020063"
+                },
+                {
+                  "name": "placement_asset_fcb46ad958bd1aa79_1735333866023",
+                  "id": "120215323320340063"
+                }
+              ]
+            }
+          ],
+          "placements": [
+            {
+              "priority": 1,
+              "platforms": [
+                "facebook",
+                "instagram",
+                "audience_network",
+                "messenger"
+              ],
+              "positions": {
+                "facebook": [
+                  "facebook_reels",
+                  "facebook_reels_overlay",
+                  "story"
+                ],
+                "instagram": [
+                  "story",
+                  "reels"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 2,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 3,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "right_hand_column"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 4,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "ig_search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 5,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "explore_home"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 6,
+              "positions": {},
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            }
+          ],
+          "callToAction": "CONTACT_US",
+          "pages": {
+            "facebook": "133539183473160",
+            "instagram": "1122505601195676"
+          }
+        }
+      },
+      "_missingFields": []
+    },
+    {
+      "id": "120215321990500063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__en",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "120215326448000063"
+      },
+      "media": {
+        "id": "120215326448000063",
+        "name": "{{product.name}} 2024-12-27-c7aefbf88f74550d3c439f6e14d0e5c9",
+        "content": {
+          "media": [
+            {
+              "type": "image",
+              "hash": "629a9f5287e2fbc37af8303de5a1651b",
+              "labels": [
+                {
+                  "name": "placement_asset_f8616f44166cad1d6_1735332214989",
+                  "id": "120215322238850063"
+                },
+                {
+                  "name": "placement_asset_fe83fad6fd7328ab6_1735332229808",
+                  "id": "120215322241220063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "9003826609682278",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYDONNwEWPOxmpMUWoYS59nQgvUxt4hhjb3afC8zqsZsoQ&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_fc54b6e614d16db12_1735332209217",
+                  "id": "120215322236470063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "895531836121876",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYDly8ah2Q9EmnE0uu80Le4YSL1CcM9y30aCnb3OkNZoGw&oe=677ECE37",
+              "labels": [
+                {
+                  "name": "placement_asset_fb774b68616b2f076_1735332209226",
+                  "id": "120215322236380063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1661461448129291",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYD3HOQDKXmWCr7U6KGh_ll7gmkfLjKcypJjlAYOH_CJaA&oe=677EF8CE",
+              "labels": [
+                {
+                  "name": "placement_asset_f1d7360d9db4c906d_1735332209208",
+                  "id": "120215322236460063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1776860846186906",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AsQuCTWkHQ5eTyl3fNiwEP6&oh=00_AYDONNwEWPOxmpMUWoYS59nQgvUxt4hhjb3afC8zqsZsoQ&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_f31cdd6ecd82042ad_1735333849983",
+                  "id": "120215323310410063"
+                }
+              ]
+            }
+          ],
+          "text": {
+            "title": "Learn to Ski at Any Age",
+            "body": "Transform Winter into Your Playground",
+            "description": "Expert instructors, personalized lessons & 30 years of experience. Start your ski adventure now!"
+          },
+          "urls": [
+            {
+              "website": "https://www.classicskischool.cz/en/",
+              "display": "www.classicskischool.cz/en/",
+              "labels": [
+                {
+                  "name": "placement_asset_fd0e722f87f41190b_1735332209231",
+                  "id": "120215322236370063"
+                },
+                {
+                  "name": "placement_asset_f3f44c09133c050b0_1735332209213",
+                  "id": "120215322236440063"
+                },
+                {
+                  "name": "placement_asset_f1db699da27ab0b7c_1735332209222",
+                  "id": "120215322236480063"
+                },
+                {
+                  "name": "placement_asset_fc560ff4a1f453dd5_1735332214989",
+                  "id": "120215322238830063"
+                },
+                {
+                  "name": "placement_asset_f195ef2770d546855_1735332229811",
+                  "id": "120215322241210063"
+                },
+                {
+                  "name": "placement_asset_fa88ac2de5c66a6ec_1735333849984",
+                  "id": "120215323310390063"
+                }
+              ]
+            }
+          ],
+          "placements": [
+            {
+              "priority": 1,
+              "platforms": [
+                "facebook",
+                "instagram",
+                "audience_network",
+                "messenger"
+              ],
+              "positions": {
+                "facebook": [
+                  "facebook_reels",
+                  "facebook_reels_overlay",
+                  "story"
+                ],
+                "instagram": [
+                  "story",
+                  "reels"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 2,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 3,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "right_hand_column"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 4,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "ig_search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 5,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "explore_home"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 6,
+              "positions": {},
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            }
+          ],
+          "callToAction": "LEARN_MORE",
+          "pages": {
+            "facebook": "133539183473160",
+            "instagram": "1122505601195676"
+          }
+        }
+      },
+      "_missingFields": []
+    },
+    {
+      "id": "120215321990520063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__pl",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "120215409720570063"
+      },
+      "media": {
+        "id": "120215409720570063",
+        "name": "{{product.name}} 2024-12-30-a64f8658e4b9238f3c71fca8672479bd",
+        "content": {
+          "media": [
+            {
+              "type": "image",
+              "hash": "629a9f5287e2fbc37af8303de5a1651b",
+              "labels": [
+                {
+                  "name": "placement_asset_f4f73a91f4b5af8e2_1735332432707",
+                  "id": "120215322263040063"
+                },
+                {
+                  "name": "placement_asset_fe66eb979cffd3f20_1735332444932",
+                  "id": "120215322266500063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1738700026978621",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYBGykyonIzljq7j9VfV0PiSlZgwSUVF86vWgyDxDa1tBw&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_fb60b7ae37d46db04_1735332406740",
+                  "id": "120215322259370063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "885469776775097",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYDHJk1uuej4fTw12uLuYfmT5QXluNwh9cAB1oNGYuk-fQ&oe=677ECE37",
+              "labels": [
+                {
+                  "name": "placement_asset_fa29767a320eaab91_1735332406753",
+                  "id": "120215322259400063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "579373678138172",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYCzqI15_EAorapgRI_RQnsuIymF3W128DkM9yvR8Kfh5Q&oe=677EF8CE",
+              "labels": [
+                {
+                  "name": "placement_asset_f1219d63a3efd97a6_1735332406733",
+                  "id": "120215322259360063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1111381144025908",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AV6uKaJgno3SOzrkWMrlSzd&oh=00_AYBGykyonIzljq7j9VfV0PiSlZgwSUVF86vWgyDxDa1tBw&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_f7fd97e4b7b09cb73_1735333815964",
+                  "id": "120215323300680063"
+                }
+              ]
+            }
+          ],
+          "text": {
+            "title": "Nauka narciarstwa w każdym wieku",
+            "body": "Rozpocznij przygodę z nartami już dziś!",
+            "description": "Doświadczeni instruktorzy, indywidualne podejście i 30 lat doświadczenia. Zacznij teraz!"
+          },
+          "urls": [
+            {
+              "website": "https://www.classicskischool.cz/pl/",
+              "display": "www.classicskischool.cz/pl/",
+              "labels": [
+                {
+                  "name": "placement_asset_fb6a33a22b282fce6_1735332406759",
+                  "id": "120215322259320063"
+                },
+                {
+                  "name": "placement_asset_f17b1fde18e1648f7_1735332406747",
+                  "id": "120215322259340063"
+                },
+                {
+                  "name": "placement_asset_f87c55e77fd63fafc_1735332406736",
+                  "id": "120215322259390063"
+                },
+                {
+                  "name": "placement_asset_f7c53d506ab3e7288_1735332432708",
+                  "id": "120215322263070063"
+                },
+                {
+                  "name": "placement_asset_f0cb7b13f99dbcae6_1735332444933",
+                  "id": "120215322266490063"
+                },
+                {
+                  "name": "placement_asset_fe617902f7be0aadc_1735333815968",
+                  "id": "120215323300650063"
+                }
+              ]
+            }
+          ],
+          "placements": [
+            {
+              "priority": 1,
+              "platforms": [
+                "facebook",
+                "instagram",
+                "audience_network",
+                "messenger"
+              ],
+              "positions": {
+                "facebook": [
+                  "facebook_reels",
+                  "facebook_reels_overlay",
+                  "story"
+                ],
+                "instagram": [
+                  "story",
+                  "reels"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 2,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 3,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "right_hand_column"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 4,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "ig_search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 5,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "explore_home"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 6,
+              "positions": {},
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            }
+          ],
+          "callToAction": "CONTACT_US",
+          "pages": {
+            "facebook": "133539183473160",
+            "instagram": "1122505601195676"
+          }
+        }
+      },
+      "_missingFields": []
+    },
+    {
+      "id": "120215321990510063",
+      "name": "adult_ski_beginner__traffic__120215321990480063__cs",
+      "status": "ACTIVE",
+      "creative": {
+        "id": "120215326631440063"
+      },
+      "media": {
+        "id": "120215326631440063",
+        "name": "{{product.name}} 2024-12-27-2f980969e5547ed2cf11c2a42b91a118",
+        "content": {
+          "media": [
+            {
+              "type": "image",
+              "hash": "629a9f5287e2fbc37af8303de5a1651b",
+              "labels": [
+                {
+                  "name": "placement_asset_f231cad2b45038e6a_1735331710910",
+                  "id": "120215322150300063"
+                },
+                {
+                  "name": "placement_asset_fe3f2f1ff4f097256_1735331737432",
+                  "id": "120215322154490063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1114413433548064",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYDDOOmpABHG1xwVvSBaL0SnFwZazBcNZoBnKWrVxn8n_w&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_f0658c26d5c390189_1735331697156",
+                  "id": "120215322146320063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1675761383039555",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471246602_398768833320775_4519998752697638192_n.jpg?stp=dst-jpg_p168x128_tt6&_nc_cat=105&ccb=1-7&_nc_sid=1727f7&_nc_ohc=E_xQFxllDhMQ7kNvgFvyI2y&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYCghs-vbA9Pl7fuGssttYjJEJpRpE4VAZD_peN0FM4edw&oe=677ECE37",
+              "labels": [
+                {
+                  "name": "placement_asset_f6cc34fd96ba586b2_1735331697163",
+                  "id": "120215322146260063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "1124831172647806",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/471335938_1018718633633734_1024545111373911736_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=103&ccb=1-7&_nc_sid=1727f7&_nc_ohc=g38byuWdTC8Q7kNvgGEJWnc&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYBSVFK8rVSvX2JK_AI6bCC8k-g1aLxz41nQE6Y8KEFl3A&oe=677EF8CE",
+              "labels": [
+                {
+                  "name": "placement_asset_fcef749a7d873d15e_1735331697151",
+                  "id": "120215322146280063"
+                }
+              ]
+            },
+            {
+              "type": "video",
+              "id": "900751145503277",
+              "thumbnail": "https://scontent-prg1-1.xx.fbcdn.net/v/t15.13418-10/470941222_606983868377942_608847213259573105_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=111&ccb=1-7&_nc_sid=1727f7&_nc_ohc=GpD8Bqh1XCQQ7kNvgHrIycl&_nc_zt=23&_nc_ht=scontent-prg1-1.xx&edm=AAT1rw8EAAAA&_nc_gid=AOVFm7XThBU5trAvSUkm5_I&oh=00_AYDDOOmpABHG1xwVvSBaL0SnFwZazBcNZoBnKWrVxn8n_w&oe=677EE09D",
+              "labels": [
+                {
+                  "name": "placement_asset_fefe2d46735c14e05_1735333723904",
+                  "id": "120215323285780063"
+                }
+              ]
+            }
+          ],
+          "text": {
+            "title": "Lyžování v každém věku",
+            "body": "Začněte s lyžováním ještě dnes!",
+            "description": "Zkušení instruktoři, osobní přístup a 30 let zkušeností. Začněte své lyžařské dobrodružství!"
+          },
+          "urls": [
+            {
+              "website": "https://www.classicskischool.cz/",
+              "display": "www.classicskischool.cz/",
+              "labels": [
+                {
+                  "name": "placement_asset_f119768d78aec6c94_1735331697152",
+                  "id": "120215322146230063"
+                },
+                {
+                  "name": "placement_asset_f04859e2a5e234a98_1735331697168",
+                  "id": "120215322146290063"
+                },
+                {
+                  "name": "placement_asset_f87ca6270e0a7e994_1735331697159",
+                  "id": "120215322146330063"
+                },
+                {
+                  "name": "placement_asset_f5abedfce8971eb7b_1735331710910",
+                  "id": "120215322150270063"
+                },
+                {
+                  "name": "placement_asset_f798e15d3e9f41bfb_1735331737433",
+                  "id": "120215322154480063"
+                },
+                {
+                  "name": "placement_asset_fa4ba273af9b159ab_1735333723905",
+                  "id": "120215323285770063"
+                }
+              ]
+            }
+          ],
+          "placements": [
+            {
+              "priority": 1,
+              "platforms": [
+                "facebook",
+                "instagram",
+                "audience_network",
+                "messenger"
+              ],
+              "positions": {
+                "facebook": [
+                  "facebook_reels",
+                  "facebook_reels_overlay",
+                  "story"
+                ],
+                "instagram": [
+                  "story",
+                  "reels"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 2,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 3,
+              "platforms": [
+                "facebook"
+              ],
+              "positions": {
+                "facebook": [
+                  "right_hand_column"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 4,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "ig_search"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 5,
+              "platforms": [
+                "instagram"
+              ],
+              "positions": {
+                "instagram": [
+                  "explore_home"
+                ]
+              },
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            },
+            {
+              "priority": 6,
+              "positions": {},
+              "age": {
+                "min": 13,
+                "max": 65
+              }
+            }
+          ],
+          "callToAction": "CONTACT_US",
+          "pages": {
+            "facebook": "133539183473160",
+            "instagram": "1122505601195676"
+          }
+        }
+      },
+      "_missingFields": []
+    }
+  ]
+}
