@@ -1,0 +1,61 @@
+=== File: src/output/insight_120215321990480063___adult_ski_beginner__traffic__120215321990480063___202501___2025-01-09T17-53-56.083Z.json ===
+=== Size: 2KB ===
+
+{
+  "metadata": {
+    "fetchedAt": "2025-01-09T17:54:57.975Z",
+    "activeOnly": true,
+    "reportingPeriod": {
+      "year": 2025,
+      "week": 1,
+      "startDate": "2024-12-31",
+      "endDate": "2025-01-06"
+    }
+  },
+  "campaign": {
+    "id": "120215321990480063",
+    "name": "adult_ski_beginner__traffic__120215321990480063",
+    "status": "PAUSED",
+    "effectiveStatus": "PAUSED",
+    "insights": [
+      {
+        "campaign_name": "adult_ski_beginner__traffic__120215321990480063",
+        "reach": "11859",
+        "impressions": "26201",
+        "frequency": "2.209377",
+        "objective": "LINK_CLICKS",
+        "spend": "2013.75",
+        "cpm": "76.857754",
+        "cpc": "8.755435",
+        "ctr": "0.877829",
+        "video_p25_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "5169"
+          }
+        ],
+        "video_p50_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "2753"
+          }
+        ],
+        "video_p75_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "1858"
+          }
+        ],
+        "video_p100_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "1353"
+          }
+        ],
+        "date_start": "2024-12-31",
+        "date_stop": "2025-01-06"
+      }
+    ]
+  },
+  "ads": []
+}

@@ -1,3 +1,6 @@
+=== File: src/runners/fetchInsights.js ===
+=== Size: 2KB ===
+
 // src/runners/fetchInsights.js
 const InsightsFetcher = require('../fetchers/insights/insightsFetcher');
 
@@ -19,32 +22,20 @@ async function run() {
             return acc;
         }, { activeOnly: false });
 
-        console.log('Running with parameters:', params);
-
         if (!params.year || !params.week) {
             throw new Error('Year and week parameters are required (--year=YYYY --week=WW)');
         }
 
-        console.log('Creating InsightsFetcher instance...');
         const fetcher = new InsightsFetcher();
-        
-        console.log('Fetcher instance created:', fetcher);
-        console.log('Checking fetchAllInsights method:', typeof fetcher.fetchAllInsights);
-        
-        if (typeof fetcher.fetchAllInsights !== 'function') {
-            throw new Error('fetchAllInsights is not properly defined on the InsightsFetcher instance');
-        }
-
-        console.log('Calling fetchAllInsights...');
         const result = await fetcher.fetchAllInsights(params);
         
         if (!result.success) {
-            throw new Error(result.error || 'Unknown error occurred');
+            throw new Error(result.error);
         }
         
         console.log('Insights fetching completed successfully');
     } catch (error) {
-        console.error('Error running insights fetcher:', error);
+        console.error('Error running insights fetcher:', error.message);
         process.exit(1);
     }
 }

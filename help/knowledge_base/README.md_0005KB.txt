@@ -1,5 +1,5 @@
 === File: README.md ===
-=== Size: 4KB ===
+=== Size: 5KB ===
 
 # Facebook Marketing API SDK
 
@@ -7,6 +7,8 @@ Example usage
 
 ``` bash
 cd $HOME/aps-goldsport-facebook/src/runners; node fetchDetails.js ski_instructors_are_waiting_for_you__awareness__120215151271950063
+cd $HOME/aps-goldsport-facebook/src/runners; node fetchDetails.js families_with_children__traffic__120215323827970063
+cd $HOME/aps-goldsport-facebook/src/runners; node fetchDetails.js adult_ski_beginner__traffic__120215321990480063
 ```
 
 Node.js SDK for Facebook Marketing API integration. This toolkit provides functionality for managing Facebook Ad campaigns, including insights retrieval, ad creation, and campaign management.

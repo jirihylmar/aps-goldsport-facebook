@@ -1,0 +1,61 @@
+=== File: src/output/insight_120215323827970063___families_with_children__traffic__120215323827970063___202501___2025-01-09T17-51-54.596Z.json ===
+=== Size: 2KB ===
+
+{
+  "metadata": {
+    "fetchedAt": "2025-01-09T17:52:56.017Z",
+    "activeOnly": true,
+    "reportingPeriod": {
+      "year": 2025,
+      "week": 1,
+      "startDate": "2024-12-31",
+      "endDate": "2025-01-06"
+    }
+  },
+  "campaign": {
+    "id": "120215323827970063",
+    "name": "families_with_children__traffic__120215323827970063",
+    "status": "PAUSED",
+    "effectiveStatus": "PAUSED",
+    "insights": [
+      {
+        "campaign_name": "families_with_children__traffic__120215323827970063",
+        "reach": "10445",
+        "impressions": "24736",
+        "frequency": "2.368214",
+        "objective": "LINK_CLICKS",
+        "spend": "2088.32",
+        "cpm": "84.424321",
+        "cpc": "9.322857",
+        "ctr": "0.905563",
+        "video_p25_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "5348"
+          }
+        ],
+        "video_p50_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "2761"
+          }
+        ],
+        "video_p75_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "1745"
+          }
+        ],
+        "video_p100_watched_actions": [
+          {
+            "action_type": "video_view",
+            "value": "1234"
+          }
+        ],
+        "date_start": "2024-12-31",
+        "date_stop": "2025-01-06"
+      }
+    ]
+  },
+  "ads": []
+}

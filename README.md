@@ -1,5 +1,7 @@
 # Facebook Marketing API SDK
 
+## fetchDetails
+
 Example usage
 
 ``` bash
@@ -8,14 +10,21 @@ cd $HOME/aps-goldsport-facebook/src/runners; node fetchDetails.js families_with_
 cd $HOME/aps-goldsport-facebook/src/runners; node fetchDetails.js adult_ski_beginner__traffic__120215321990480063
 ```
 
-Node.js SDK for Facebook Marketing API integration. This toolkit provides functionality for managing Facebook Ad campaigns, including insights retrieval, ad creation, and campaign management.
+## fetchInsights
+
+Need to be run every week.
+
+Example usage
+
+```bash
+node src/runners/fetchInsights.js --active=true --year=2025 --week=01
+```
 
 ## Features
 
 Currently Implemented:
 - Campaign Insights retrieval
-- Performance metrics analysis
-- Environment-based configuration (Production/Sandbox)
+- Performance metrics
 
 Coming Soon:
 - Campaign creation and management
