@@ -1,3 +1,4 @@
+// src/fetchers/insights/insightsFetcher.js
 const path = require('path');
 const fs = require('fs').promises;
 const FB = require('fb');
@@ -10,7 +11,7 @@ class InsightsFetcher {
         FB.setAccessToken(fbConfig.getAccessToken());
         FB.options({ version: fbConfig.getApiVersion() });
         this.accountId = fbConfig.getAccountId();
-        this.outputPath = path.join(process.cwd(), 'src', 'output');
+        this.outputPath = path.join(process.cwd(), '_scratch');
         this.waitTime = 2000;
         this.fields = [
             'campaign_name',
@@ -24,6 +25,9 @@ class InsightsFetcher {
             'cpm',
             'cpc',
             'ctr',
+            'actions',
+            'action_values',
+            'cost_per_action_type',
             'video_p25_watched_actions',
             'video_p50_watched_actions',
             'video_p75_watched_actions',
@@ -34,272 +38,337 @@ class InsightsFetcher {
     }
 
     async makeApiCall(endpoint, method, params) {
-        return new Promise((resolve, reject) => {
-            console.log('\nMaking API call:');
-            console.log('Endpoint:', endpoint);
-            console.log('Method:', method);
-            console.log('Params:', JSON.stringify(params, null, 2));
-           
-            FB.api(endpoint, method, params, (response) => {
-                if (!response) {
-                    console.error('No response received from Facebook API');
-                    reject(new Error('No response received'));
-                    return;
-                }
+        try {
+            return new Promise((resolve, reject) => {
+                console.log('\nMaking API call:');
+                console.log('Endpoint:', endpoint);
+                console.log('Method:', method);
+                console.log('Params:', JSON.stringify(params, null, 2));
                
-                if (response.error) {
-                    console.error('Facebook API Error:');
-                    console.error('- Message:', response.error.message);
-                    console.error('- Type:', response.error.type);
-                    console.error('- Code:', response.error.code);
-                    console.error('- Subcode:', response.error.error_subcode);
-                    reject(response.error);
-                    return;
-                }
-
-                if (method === 'GET' && Array.isArray(response.data) && response.data.length === 0) {
-                    console.warn('No data found for the query');
-                }
-
-                console.log('API Response:', JSON.stringify(response, null, 2));
-                resolve(response);
+                FB.api(endpoint, method, params, (response) => {
+                    if (!response) {
+                        console.error('No response received from Facebook API');
+                        reject(new Error('No response received'));
+                        return;
+                    }
+                   
+                    if (response.error) {
+                        console.error('Facebook API Error:', response.error);
+                        reject(response.error);
+                        return;
+                    }
+    
+                    console.log('API Response:', JSON.stringify(response, null, 2));
+                    resolve(response);
+                });
             });
-        });
+        } catch (error) {
+            console.error('Error in API call:', error);
+            throw error;
+        }
     }
 
     handleError(error, context) {
-        console.error(`Error in ${context}:`, error);
-        return {
+        const errorDetails = {
             success: false,
-            error: error.message,
-            context
+            error: error.message || 'Unknown error occurred',
+            context: context,
+            timestamp: new Date().toISOString()
         };
+        console.error('Error occurred:', errorDetails);
+        return errorDetails;
     }
 
-    sleep(ms) {
+    async sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-	getDateRangeForWeek(year, week) {
-		// Validate inputs
-		if (week < 1 || week > 53) {
-			throw new Error('Week must be between 1 and 53');
-		}
-	
-		// Find January 4th for the given year, which is always in week 1 according to ISO 8601
-		const jan4th = new Date(year, 0, 4);
-		
-		// Get the Monday of week 1 by finding the previous Monday from January 4th
-		const firstMonday = new Date(jan4th);
-		const daysSinceMonday = jan4th.getDay() - 1; // Days since last Monday (0 = Monday in our calc)
-		firstMonday.setDate(jan4th.getDate() - (daysSinceMonday < 0 ? 6 : daysSinceMonday));
-	
-		// Calculate the start date by adding the required weeks
-		const startDate = new Date(firstMonday);
-		startDate.setDate(firstMonday.getDate() + (week - 1) * 7);
-	
-		// Calculate the end date (start date + 6 days)
-		const endDate = new Date(startDate);
-		endDate.setDate(startDate.getDate() + 6);
-	
-		// Format dates as YYYY-MM-DD
-		const formatDate = (date) => {
-			const y = date.getFullYear();
-			const m = String(date.getMonth() + 1).padStart(2, '0');
-			const d = String(date.getDate()).padStart(2, '0');
-			return `${y}-${m}-${d}`;
-		};
-	
-		return {
-			since: formatDate(startDate),
-			until: formatDate(endDate)
-		};
-	}
+    async getExistingDates(campaignName) {
+        try {
+            const campaignPath = path.join(this.outputPath, `campaign=${campaignName}`, 'type=insights');
+            try {
+                const days = await fs.readdir(campaignPath);
+                return days.map(date => date.replace('date=', ''));
+            } catch (error) {
+                if (error.code === 'ENOENT') {
+                    return [];
+                }
+                throw error;
+            }
+        } catch (error) {
+            console.error('Error getting existing dates:', error);
+            return [];
+        }
+    }
 
-	async fetchAllInsights(params = {}) {
-		console.log('fetchAllInsights called with params:', params);
-		const { activeOnly = false, year, week } = params;
-		let retries = 3;
-		
-		while (retries > 0) {
-			try {
-				const dateRange = this.getDateRangeForWeek(year, week);
-				console.log(`Fetching data for week ${week} of ${year} (${dateRange.since} to ${dateRange.until})`);
-				console.log(`Using account ID: ${this.accountId}`);
-				
-				// First, get only active campaigns if activeOnly is true
-				const campaignParams = {
-					fields: ['id', 'name', 'status', 'effective_status'],
-					limit: 1000
-				};
-	
-				if (activeOnly) {
-					campaignParams.filtering = [{
-						field: "effective_status",
-						operator: "IN",
-						value: ['ACTIVE'] // Only ACTIVE, not PAUSED
-					}];
-				}
-	
-				const campaigns = await this.makeApiCall(
-					`/act_${this.accountId}/campaigns`,
-					'GET',
-					campaignParams
-				);
-	
-				if (!campaigns.data || campaigns.data.length === 0) {
-					console.log('No active campaigns found. Please verify:');
-					console.log('1. Account ID is correct');
-					console.log('2. Access token has necessary permissions');
-					console.log('3. There are active campaigns in the account');
-					return { success: false, error: 'No active campaigns found' };
-				}
-	
-				// Process only active campaigns
-				for (const campaign of campaigns.data) {
-					try {
-						await this._fetchAndSaveInsights(campaign, activeOnly, dateRange, year, week);
-						await this.sleep(this.waitTime);
-					} catch (error) {
-						console.error(`Error processing campaign ${campaign.name}:`, error.message);
-					}
-				}
-	
-				return { success: true };
-			} catch (error) {
-				console.error('API call failed, retries left:', retries - 1);
-				retries--;
-				if (retries === 0) {
-					return this.handleError(error, 'fetchAllInsights');
-				}
-				await this.sleep(5000);
-			}
-		}
-	}
+    async createOutputDirectory(campaignName, date) {
+        try {
+            const dirPath = path.join(
+                this.outputPath,
+                `campaign=${campaignName}`,
+                'type=insights',
+                `date=${date}`
+            );
+            await fs.mkdir(dirPath, { recursive: true });
+            return dirPath;
+        } catch (error) {
+            console.error('Error creating directory:', error);
+            throw error;
+        }
+    }
 
-	async _fetchAndSaveInsights(campaign, activeOnly, dateRange, year, week) {
-		const timestamp = new Date().toISOString().replace(/:/g, '-');
-		const weekStr = String(week).padStart(2, '0');
-	
-		try {
-			// Fetch campaign insights - no status filtering here
-			console.log(`\nFetching insights for campaign ${campaign.name}`);
-			const campaignInsights = await this.makeApiCall(
-				`/${campaign.id}/insights`,
-				'GET',
-				{
-					fields: this.fields.join(','),
-					time_range: {
-						since: dateRange.since,
-						until: dateRange.until
-					}
-				}
-			);
-			
-			// Only proceed if campaign has insights
-			if (!campaignInsights.data || campaignInsights.data.length === 0) {
-				console.log(`No insights found for campaign ${campaign.name} - skipping`);
-				return { success: true, skipped: true };
-			}
-	
-			// Initialize data structure
-			const initialData = {
-				metadata: {
-					fetchedAt: new Date().toISOString(),
-					activeOnly,
-					reportingPeriod: {
-						year,
-						week: parseInt(weekStr),
-						startDate: dateRange.since,
-						endDate: dateRange.until
-					}
-				},
-				campaign: {
-					id: campaign.id,
-					name: campaign.name,
-					status: campaign.status,
-					effectiveStatus: campaign.effective_status,
-					insights: campaignInsights.data || []
-				},
-				ads: []
-			};
-	
-			// Save initial campaign data
-			const fileName = `insight_${campaign.id}___${campaign.name.split('__')[0]}__traffic__${campaign.id}___${year}${weekStr}___${timestamp}.json`;
-			const filePath = path.join(this.outputPath, fileName);
-			await fs.mkdir(this.outputPath, { recursive: true });
-			await fs.writeFile(filePath, JSON.stringify(initialData, null, 2));
-			console.log(`Saved initial campaign insights to ${filePath}`);
-	
-			await this.sleep(this.waitTime);
-	
-			// Fetch ads with status filtering
-			const adParams = {
-				fields: ['id', 'name', 'status', 'effective_status', 'adset_id'],
-				limit: 1000
-			};
-	
-			if (activeOnly) {
-				adParams.filtering = [{
-					field: "effective_status",
-					operator: "IN",
-					value: ['ACTIVE', 'PAUSED']
-				}];
-			}
-	
-			const ads = await this.makeApiCall(
-				`/${campaign.id}/ads`,
-				'GET',
-				adParams
-			);
-	
-			const adInsights = [];
-			for (const ad of ads.data || []) {
-				try {
-					// Fetch ad insights - no status filtering here
-					const insights = await this.makeApiCall(
-						`/${ad.id}/insights`,
-						'GET',
-						{
-							fields: this.fields.join(','),
-							time_range: {
-								since: dateRange.since,
-								until: dateRange.until
-							}
-						}
-					);
-					
-					if (insights.data && insights.data.length > 0) {
-						adInsights.push({
-							adId: ad.id,
-							adsetId: ad.adset_id,
-							name: ad.name,
-							status: ad.status,
-							effectiveStatus: ad.effective_status,
-							insights: insights.data
-						});
-						
-						// Update file with each new ad insight
-						initialData.ads = adInsights;
-						await fs.writeFile(filePath, JSON.stringify(initialData, null, 2));
-						console.log(`Updated insights file with ad ${ad.name}`);
-					} else {
-						console.log(`No insights found for ad ${ad.name}`);
-					}
-					
-					await this.sleep(this.waitTime);
-				} catch (error) {
-					console.error(`Error fetching insights for ad ${ad.name}:`, error.message);
-				}
-			}
-	
-			console.log(`Completed processing campaign ${campaign.name} with ${adInsights.length} ads`);
-			return { success: true, adsCount: adInsights.length };
-		} catch (error) {
-			console.error(`Error processing campaign ${campaign.name}:`, error.message);
-			return { success: false, error: error.message };
-		}
-	}
+    generateFileName(campaignId, campaignName, date, type, timestamp) {
+        return `insight_${campaignId}___${campaignName}___${type}__${date}__czech_republic___${timestamp}.json`;
+    }
+
+    async fetchDailyInsights(entityId, date) {
+        try {
+            const insights = await this.makeApiCall(
+                `/${entityId}/insights`,
+                'GET',
+                {
+                    fields: this.fields.join(','),
+                    time_range: {
+                        since: date,
+                        until: date
+                    }
+                }
+            );
+            return insights.data || [];
+        } catch (error) {
+            console.error(`Error fetching daily insights for date ${date}:`, error);
+            return [];
+        }
+    }
+
+    async fetchToDateInsights(entityId, fromDate, toDate) {
+        try {
+            const insights = await this.makeApiCall(
+                `/${entityId}/insights`,
+                'GET',
+                {
+                    fields: this.fields.join(','),
+                    time_range: {
+                        since: fromDate,
+                        until: toDate
+                    }
+                }
+            );
+            return insights.data || [];
+        } catch (error) {
+            console.error(`Error fetching to-date insights for date range ${fromDate} to ${toDate}:`, error);
+            return [];
+        }
+    }
+
+    async fetchInsights(params = {}) {
+        const { campaignName, fromDate, toDate } = params;
+        if (!campaignName) {
+            throw new Error('Campaign name is required');
+        }
+
+        try {
+            // Get campaign
+            const campaigns = await this.makeApiCall(
+                `/act_${this.accountId}/campaigns`,
+                'GET',
+                {
+                    fields: ['id', 'name', 'status', 'effective_status'],
+                    filtering: [{
+                        field: "name",
+                        operator: "EQUAL",
+                        value: campaignName
+                    }]
+                }
+            );
+
+            if (!campaigns.data || campaigns.data.length === 0) {
+                throw new Error(`No campaign found with name: ${campaignName}`);
+            }
+
+            const campaign = campaigns.data[0];
+
+            // Get ads
+            const ads = await this.makeApiCall(
+                `/${campaign.id}/ads`,
+                'GET',
+                {
+                    fields: ['id', 'name', 'status', 'effective_status', 'adset_id'],
+                    limit: 1000
+                }
+            );
+
+            // Get adset details for budget info
+            const adSets = new Map();
+            for (const ad of ads.data) {
+                if (!adSets.has(ad.adset_id)) {
+                    const adsetDetails = await this.makeApiCall(
+                        `/${ad.adset_id}`,
+                        'GET',
+                        {
+                            fields: ['daily_budget', 'lifetime_budget']
+                        }
+                    );
+                    adSets.set(ad.adset_id, adsetDetails);
+                    await this.sleep(this.waitTime);
+                }
+            }
+
+            // Process each date
+            let currentDate = new Date(fromDate);
+            const targetDate = new Date(toDate);
+
+            while (currentDate <= targetDate) {
+                const dateStr = currentDate.toISOString().split('T')[0];
+
+                // Get campaign daily insights
+                const campaignDailyInsights = await this.fetchDailyInsights(campaign.id, dateStr);
+                await this.sleep(this.waitTime);
+
+                // Get campaign to-date insights
+                const campaignToDateInsights = await this.fetchToDateInsights(campaign.id, fromDate, dateStr);
+                await this.sleep(this.waitTime);
+
+                // Get daily insights for each ad
+                const adDailyInsightsList = [];
+                const adToDateInsightsList = [];
+
+                for (const ad of ads.data) {
+                    // Get ad daily insights
+                    const dailyInsights = await this.fetchDailyInsights(ad.id, dateStr);
+                    if (dailyInsights.length > 0) {
+                        const adsetDetails = adSets.get(ad.adset_id);
+                        adDailyInsightsList.push({
+                            adId: ad.id,
+                            adsetId: ad.adset_id,
+                            name: ad.name,
+                            status: ad.status,
+                            effectiveStatus: ad.effective_status,
+                            insights: dailyInsights.map(insight => ({
+                                ...insight,
+                                result_type: "Link clicks",
+                                results: insight.actions?.find(a => a.action_type === 'link_click')?.value || 0,
+                                ad_set_budget: adsetDetails.daily_budget || adsetDetails.lifetime_budget,
+                                ad_set_budget_type: adsetDetails.daily_budget ? 'Daily' : 'Lifetime'
+                            }))
+                        });
+                    }
+                    await this.sleep(this.waitTime);
+
+                    // Get ad to-date insights
+                    const toDateInsights = await this.fetchToDateInsights(ad.id, fromDate, dateStr);
+                    if (toDateInsights.length > 0) {
+                        const adsetDetails = adSets.get(ad.adset_id);
+                        adToDateInsightsList.push({
+                            adId: ad.id,
+                            adsetId: ad.adset_id,
+                            name: ad.name,
+                            status: ad.status,
+                            effectiveStatus: ad.effective_status,
+                            insights: toDateInsights.map(insight => ({
+                                ...insight,
+                                result_type: "Link clicks",
+                                results: insight.actions?.find(a => a.action_type === 'link_click')?.value || 0,
+                                ad_set_budget: adsetDetails.daily_budget || adsetDetails.lifetime_budget,
+                                ad_set_budget_type: adsetDetails.daily_budget ? 'Daily' : 'Lifetime'
+                            }))
+                        });
+                    }
+                    await this.sleep(this.waitTime);
+                }
+
+                // Save daily insights
+                if (campaignDailyInsights.length > 0 || adDailyInsightsList.length > 0) {
+                    const outputDir = await this.createOutputDirectory(campaign.name, dateStr);
+                    const timestamp = new Date().toISOString().replace(/:/g, '-');
+
+                    const dailyFileName = this.generateFileName(
+                        campaign.id,
+                        campaign.name,
+                        dateStr,
+                        'date',
+                        timestamp
+                    );
+
+                    const dailyData = {
+                        metadata: {
+                            fetchedAt: new Date().toISOString(),
+                            reportingPeriod: {
+                                date: dateStr,
+                                type: 'daily'
+                            }
+                        },
+                        campaign: {
+                            id: campaign.id,
+                            name: campaign.name,
+                            status: campaign.status,
+                            effectiveStatus: campaign.effective_status,
+                            insights: campaignDailyInsights.map(insight => ({
+                                ...insight,
+                                result_type: "Link clicks",
+                                results: insight.actions?.find(a => a.action_type === 'link_click')?.value || 0
+                            }))
+                        },
+                        ads: adDailyInsightsList
+                    };
+
+                    await fs.writeFile(
+                        path.join(outputDir, dailyFileName),
+                        JSON.stringify(dailyData, null, 2)
+                    );
+                }
+
+                // Save to-date insights
+                if (campaignToDateInsights.length > 0 || adToDateInsightsList.length > 0) {
+                    const outputDir = await this.createOutputDirectory(campaign.name, dateStr);
+                    const timestamp = new Date().toISOString().replace(/:/g, '-');
+
+                    const toDateFileName = this.generateFileName(
+                        campaign.id,
+                        campaign.name,
+                        `${fromDate}_${dateStr}`,
+                        'to_date',
+                        timestamp
+                    );
+
+                    const toDateData = {
+                        metadata: {
+                            fetchedAt: new Date().toISOString(),
+                            reportingPeriod: {
+                                startDate: fromDate,
+                                endDate: dateStr,
+                                type: 'toDate'
+                            }
+                        },
+                        campaign: {
+                            id: campaign.id,
+                            name: campaign.name,
+                            status: campaign.status,
+                            effectiveStatus: campaign.effective_status,
+                            insights: campaignToDateInsights.map(insight => ({
+                                ...insight,
+                                result_type: "Link clicks",
+                                results: insight.actions?.find(a => a.action_type === 'link_click')?.value || 0
+                            }))
+                        },
+                        ads: adToDateInsightsList
+                    };
+
+                    await fs.writeFile(
+                        path.join(outputDir, toDateFileName),
+                        JSON.stringify(toDateData, null, 2)
+                    );
+                }
+
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+
+            return { success: true };
+
+        } catch (error) {
+            return this.handleError(error, 'fetchInsights');
+        }
+    }
 }
 
 module.exports = InsightsFetcher;

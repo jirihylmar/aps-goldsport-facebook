@@ -3,7 +3,7 @@ const path = require('path');
 const TextPusher = require('../pushers/textPusher');
 
 async function findCampaignDetailsFile(campaignId) {
-  const outputDir = path.join(process.cwd(), 'src', 'output');
+  const outputDir = path.join(process.cwd(), '_scratch');
   const files = fs.readdirSync(outputDir)
     .filter(f => f.startsWith(`campaign_${campaignId}___`) && f.endsWith('___details.json'))
     .sort()

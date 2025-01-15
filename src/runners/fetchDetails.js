@@ -10,7 +10,7 @@ class DetailsFetcher {
         this.campaignFetcher = new CampaignDetailsFetcher();
         this.adSetFetcher = new AdSetDetailsFetcher();
         this.adFetcher = new AdDetailsFetcher();
-        this.outputDir = path.join(__dirname, '../output');
+        this.outputPath = path.join(process.cwd(), '_scratch');
     }
 
     _formatCampaignId(campaignId) {
@@ -196,20 +196,35 @@ class DetailsFetcher {
 
     async _saveResults(campaignId, results) {
         try {
-            await fs.mkdir(this.outputDir, { recursive: true });
-
-            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-            // Sanitize campaign name to be filename-safe (replace spaces and special chars with underscores)
+            await fs.mkdir(this.outputPath, { recursive: true });
+    
+            const timestamp = new Date().toISOString();
+            const date = timestamp.split('T')[0];  // Gets YYYY-MM-DD
+            const formattedTimestamp = timestamp.replace(/[:.]/g, '-');
+            
+            // Sanitize campaign name to be filename-safe
             const safeNameFormat = results.campaign.name.replace(/[^a-zA-Z0-9]/g, '_');
-            const filename = `campaign_${campaignId}___${safeNameFormat}___${timestamp}___details.json`;
-
+            
+            // Create the structured key
+            const key = [
+                `campaign=${safeNameFormat}`,
+                'type=details',
+                `date=${date}`,
+                `details_${campaignId}___${safeNameFormat}___${formattedTimestamp}___details.json`
+            ].join('/');
+    
             // Save detailed results
-            const detailsPath = path.join(this.outputDir, filename);
+            const detailsPath = path.join(this.outputPath, key);
+            
+            // Ensure directory structure exists
+            await fs.mkdir(path.dirname(detailsPath), { recursive: true });
+            
+            // Write the file
             await fs.writeFile(detailsPath, JSON.stringify(results, null, 2));
-
+    
             console.log(`\nFile saved: ${detailsPath}`);
-
-            return { detailsPath };
+    
+            return { detailsPath, key };
         } catch (error) {
             console.error('Error saving results:', error);
             throw error;

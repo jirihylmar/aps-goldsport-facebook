@@ -6,37 +6,41 @@ async function run() {
         const params = process.argv.slice(2).reduce((acc, arg) => {
             const [key, value] = arg.split('=');
             switch (key) {
-                case '--active':
-                    acc.activeOnly = value === 'true';
+                case '--campaign-name':
+                    acc.campaignName = value;
                     break;
-                case '--year':
-                    acc.year = parseInt(value);
+                case '--from-date':
+                    acc.fromDate = value;
                     break;
-                case '--week':
-                    acc.week = parseInt(value);
+                case '--to-date':
+                    acc.toDate = value;
                     break;
             }
             return acc;
-        }, { activeOnly: false });
+        }, {});
 
         console.log('Running with parameters:', params);
+        
+        if (!params.campaignName) {
+            throw new Error('Campaign name parameter is required (--campaign-name=XXXXX)');
+        }
 
-        if (!params.year || !params.week) {
-            throw new Error('Year and week parameters are required (--year=YYYY --week=WW)');
+        if (!params.fromDate) {
+            throw new Error('From date parameter is required (--from-date=YYYY-MM-DD)');
         }
 
         console.log('Creating InsightsFetcher instance...');
         const fetcher = new InsightsFetcher();
         
         console.log('Fetcher instance created:', fetcher);
-        console.log('Checking fetchAllInsights method:', typeof fetcher.fetchAllInsights);
+        console.log('Checking fetchInsights method:', typeof fetcher.fetchInsights);
         
-        if (typeof fetcher.fetchAllInsights !== 'function') {
-            throw new Error('fetchAllInsights is not properly defined on the InsightsFetcher instance');
+        if (typeof fetcher.fetchInsights !== 'function') {
+            throw new Error('fetchInsights is not properly defined on the InsightsFetcher instance');
         }
 
-        console.log('Calling fetchAllInsights...');
-        const result = await fetcher.fetchAllInsights(params);
+        console.log('Calling fetchInsights...');
+        const result = await fetcher.fetchInsights(params);
         
         if (!result.success) {
             throw new Error(result.error || 'Unknown error occurred');
