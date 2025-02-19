@@ -12,9 +12,6 @@ async function run() {
                 case '--from-date':
                     acc.fromDate = value;
                     break;
-                case '--to-date':
-                    acc.toDate = value;
-                    break;
             }
             return acc;
         }, {});
@@ -32,13 +29,6 @@ async function run() {
         console.log('Creating InsightsFetcher instance...');
         const fetcher = new InsightsFetcher();
         
-        console.log('Fetcher instance created:', fetcher);
-        console.log('Checking fetchInsights method:', typeof fetcher.fetchInsights);
-        
-        if (typeof fetcher.fetchInsights !== 'function') {
-            throw new Error('fetchInsights is not properly defined on the InsightsFetcher instance');
-        }
-
         console.log('Calling fetchInsights...');
         const result = await fetcher.fetchInsights(params);
         

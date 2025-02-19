@@ -1,92 +1,83 @@
 # Facebook Insights Fetcher
 
-Node.js utility for fetching Facebook Ads insights data across campaigns, ad sets, and ads.
+Automated tool for fetching and storing Facebook ad campaign insights data.
 
 ## Features
 
-- Fetches insights for all levels: campaigns, ad sets, and ads
-- Option to fetch only active items
-- Built-in rate limit handling with 60-second delays
-- Sequential processing to avoid API limits
+- Fetches daily and to-date insights for campaigns and ads
+- Skips already processed dates for efficiency
+- Stores data in organized directory structure
+- Rate limiting with configurable wait times
+- Error handling and logging
+- Automatic date range handling (from specified start date to current date)
+
+## Installation
+
+```bash
+git clone [repository-url]
+cd [repository-name]
+npm install
+```
+
+## Prerequisites
+
+- Node.js installed
+- Facebook API credentials configured in `utils/fbConfig.js`
+- Required npm packages: `fb`, `fs`, `path`
 
 ## Usage
 
-### Basic Run
-Fetch insights for all ads:
 ```bash
-node src/runners/fetchInsights.js
+cd $HOME/aps-goldsport-facebook
+node src/runners/fetchInsights.js --campaign-name=<campaign_name> --from-date=<YYYY-MM-DD>
 ```
 
-### Active Only
-Fetch insights for active ads only:
-```bash
-node src/runners/fetchInsights.js --active=true
+### Parameters
+
+- `--campaign-name`: (Required) Name of the Facebook campaign
+- `--from-date`: (Required) Start date in YYYY-MM-DD format
+
+## Data Structure
+
+Data is stored in the following directory structure:
+```
+_scratch/
+└── campaign=<campaign_name>/
+    └── type=insights/
+        └── date=<YYYY-MM-DD>/
+            ├── insight_<campaign_id>___<campaign_name>___date__<date>__czech_republic___<timestamp>.json
+            └── insight_<campaign_id>___<campaign_name>___to_date__<from_date>_<date>__czech_republic___<timestamp>.json
 ```
 
-## Output Files
+### Output Files
 
-Files are saved in `src/output/` with format:
-```
-insight_{campaign_id}___{campaign_name}___{timestamp}.json
-```
+#### Daily Insights (date)
+Contains metrics for a specific date:
+- Campaign level insights
+- Ad level insights
+- Budget information
+- Performance metrics
 
-Example output structure:
-```json
-{
-  "metadata": {
-    "fetchedAt": "2024-12-28T12:00:00.000Z",
-    "activeOnly": true
-  },
-  "campaign": {
-    "id": "123456789",
-    "name": "Campaign Name",
-    "status": "ACTIVE",
-    "effectiveStatus": "ACTIVE",
-    "insights": [
-      {
-        "impressions": "1000",
-        "clicks": "100",
-        "spend": "50.00",
-        "reach": "800",
-        "cpc": "0.50",
-        "ctr": "10",
-        "unique_clicks": "95"
-      }
-    ]
-  },
-  "adSets": [...],
-  "ads": [...]
-}
-```
-
-## Rate Limiting
-
-- 60-second delay between API calls
-- Sequential processing (no parallel requests)
-- Automatic handling of rate limit errors
-
-## Common Issues
-
-### Rate Limit Error
-```
-Facebook API Error:
-- Message: User request limit reached
-- Type: OAuthException
-- Code: 17
-- Subcode: 2446079
-```
-Solution: Script will automatically wait and retry. Default wait time is 60 seconds between requests.
+#### To-Date Insights (to_date)
+Contains cumulative metrics from the start date to the current date:
+- Campaign level insights
+- Ad level insights
+- Budget information
+- Performance metrics
 
 ## Configuration
 
-In src/utils/fbConfig.js:
-```javascript
-class FacebookConfig {
-    constructor() {
-        this.accessToken = 'YOUR_ACCESS_TOKEN';
-        this.apiVersion = 'v18.0';
-        this.accountId = 'YOUR_ACCOUNT_ID';
-    }
-    // ...
-}
-```
+Key configurations in `InsightsFetcher` class:
+- `waitTime`: Delay between API calls (default: 2000ms)
+- `fields`: List of metrics to fetch
+- `outputPath`: Base directory for storing data
+
+## Error Handling
+
+- Logs errors with context and timestamps
+- Continues processing on non-fatal errors
+- Returns detailed error information in responses
+
+## License
+
+[License information]

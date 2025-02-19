@@ -1,44 +1,15 @@
 # Facebook Marketing API SDK
 
-## fetchDetails
+Example usage
 
-Need to run after campaign, ad change to know what settings we had.
-
-``` bash
-
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchDetails.js ski_instructors_are_waiting_for_you__awareness__120214861308510063
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchDetails.js dual_interest_winter_sports__awareness__120214867158120063
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchDetails.js hug_our_bear_brumik__awareness__120214866537440063
-
----
-
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchDetails.js families_with_children__traffic__120215323827970063
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchDetails.js adult_ski_beginner__traffic__120215321990480063
-```
-
-## fetchInsights
-
-Need to be run every week to refresh. TODO add functionality to skip existing.
-
-Usage
-
-```bash
-
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchInsights.js --campaign-name=ski_instructors_are_waiting_for_you__awareness__120214861308510063 --from-date=2024-12-12 --to-date=2024-12-15
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchInsights.js --campaign-name=dual_interest_winter_sports__awareness__120214867158120063 --from-date=2024-12-12 --to-date=2024-12-15
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchInsights.js --campaign-name=hug_our_bear_brumik__awareness__120214866537440063 --from-date=2024-12-12 --to-date=2024-12-15
-
----
-
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchInsights.js --campaign-name=families_with_children__traffic__120215323827970063 --from-date=2024-12-27 --to-date=2025-01-13
-cd $HOME/aps-goldsport-facebook; node src/runners/fetchInsights.js --campaign-name=adult_ski_beginner__traffic__120215321990480063 --from-date=2024-12-27 --to-date=2025-01-13
-```
+See `/home/hylmarj/doc-digital-horizon-goldsport/run_analytics.sh`.
 
 ## Features
 
 Currently Implemented:
 - Campaign Insights retrieval
 - Performance metrics
+- Transformation to sql structures
 
 Coming Soon:
 - Campaign creation and management

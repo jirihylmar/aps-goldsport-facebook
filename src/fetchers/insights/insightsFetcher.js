@@ -11,7 +11,7 @@ class InsightsFetcher {
         FB.setAccessToken(fbConfig.getAccessToken());
         FB.options({ version: fbConfig.getApiVersion() });
         this.accountId = fbConfig.getAccountId();
-        this.outputPath = path.join(process.cwd(), '_scratch');
+        this.outputPath = '/home/hylmarj/_scratch/aps-goldsport-facebook';
         this.waitTime = 2000;
         this.fields = [
             'campaign_name',
@@ -162,12 +162,25 @@ class InsightsFetcher {
     }
 
     async fetchInsights(params = {}) {
-        const { campaignName, fromDate, toDate } = params;
+        const { campaignName, fromDate } = params;
         if (!campaignName) {
             throw new Error('Campaign name is required');
         }
 
         try {
+            // Get already processed dates
+            const existingDates = await this.getExistingDates(campaignName);
+            console.log('Existing dates:', existingDates);
+
+            // Set date range
+            const startDate = new Date(fromDate);
+            const today = new Date();
+            // Set endDate to yesterday
+            const endDate = new Date(today);
+            endDate.setDate(endDate.getDate() - 1);
+            
+            console.log(`Processing data from ${startDate.toISOString()} to ${endDate.toISOString()}`);
+
             // Get campaign
             const campaigns = await this.makeApiCall(
                 `/act_${this.accountId}/campaigns`,
@@ -215,11 +228,19 @@ class InsightsFetcher {
             }
 
             // Process each date
-            let currentDate = new Date(fromDate);
-            const targetDate = new Date(toDate);
+            let currentDate = new Date(startDate);
 
-            while (currentDate <= targetDate) {
+            while (currentDate <= endDate) {
                 const dateStr = currentDate.toISOString().split('T')[0];
+                
+                // Skip if data already exists for this date
+                if (existingDates.includes(dateStr)) {
+                    console.log(`Skipping ${dateStr} - data already exists`);
+                    currentDate.setDate(currentDate.getDate() + 1);
+                    continue;
+                }
+
+                console.log(`Processing ${dateStr}`);
 
                 // Get campaign daily insights
                 const campaignDailyInsights = await this.fetchDailyInsights(campaign.id, dateStr);
