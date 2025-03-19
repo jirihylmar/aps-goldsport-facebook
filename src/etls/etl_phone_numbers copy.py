@@ -191,20 +191,6 @@ def is_valid_number(number: str, country: str) -> bool:
         
     return bool(re.match(patterns[country], number))
 
-# Only keeping this function for reference, it's no longer used
-def get_language_code(country_code: str) -> str:
-    """
-    This function is no longer used - languages are determined directly in the process_file function
-    """
-    country_to_language = {
-        'CZ': 'cs',  # Czech
-        'DE': 'de',  # German
-        'PL': 'pl',  # Polish
-        'AT': 'de',  # Austrian (German)
-    }
-    
-    return country_to_language.get(country_code, 'en')  # Default to English if not found
-
 def process_file(input_path: str) -> None:
     """
     Process input TSV file and create output CSV with standardized phone numbers
@@ -213,10 +199,6 @@ def process_file(input_path: str) -> None:
         # Read input file
         logger.info(f"Reading input file: {input_path}")
         df = pd.read_csv(input_path, sep='\t', low_memory=False)
-        
-        # Count total unique orders
-        total_orders = df['id_order'].nunique()
-        logger.info(f"Total unique orders in input file: {total_orders}")
         
         # Prepare output data
         output_data = []
@@ -232,27 +214,11 @@ def process_file(input_path: str) -> None:
             for number in numbers:
                 cleaned_number, country, original = clean_phone_number(number)
                 if cleaned_number and is_valid_number(cleaned_number, country):
-                    # Extract language and name_sponsor from the row
-                    language = row.get('language', '').strip().lower() if not pd.isna(row.get('language', '')) else ''
-                    name_sponsor = row.get('name_sponsor', '') if not pd.isna(row.get('name_sponsor', '')) else ''
-                    
-                    # Set language strictly based on country code, regardless of input language
-                    if country == 'CZ':
-                        language = 'cs'
-                    elif country == 'DE' or country == 'AT':  # Both Germany and Austria use German
-                        language = 'de'
-                    elif country == 'PL':
-                        language = 'pl'
-                    else:
-                        language = 'en'  # Default for all other countries
-                    
                     output_data.append({
                         'id_order': row['id_order'],
                         'date_order': row['date_order'],
                         'phone_number': cleaned_number,
-                        'country': country,
-                        'language': language,
-                        'name_sponsor': name_sponsor
+                        'country': country
                     })
                 else:
                     invalid_numbers.append({
@@ -273,13 +239,7 @@ def process_file(input_path: str) -> None:
         
         # Generate output paths
         input_filename = Path(input_path).name
-        date_range_match = re.search(r'(\d{4}-\d{2}-\d{2}_\d{4}-\d{2}-\d{2})', input_filename)
-        if date_range_match:
-            date_range = date_range_match.group(1)
-        else:
-            # Default to current date range if not found in filename
-            now = datetime.now()
-            date_range = f"{now.strftime('%Y-%m-%d')}_{now.strftime('%Y-%m-%d')}"
+        date_range = re.search(r'(\d{4}-\d{2}-\d{2}_\d{4}-\d{2}-\d{2})', input_filename).group(1)
         
         output_base = Path("/home/hylmarj/_scratch/staging-goldsport-analytics/goldsport__phone_numbers___gsp_dataset___auto_full/method=auto_full/source=goldsport")
         output_base.mkdir(parents=True, exist_ok=True)
@@ -294,47 +254,13 @@ def process_file(input_path: str) -> None:
         logger.info(f"Saving {len(invalid_df)} invalid numbers to: {invalid_path}")
         invalid_df.to_csv(invalid_path, index=False)
         
-        # Create and save unique phone numbers file
-        # This filters to just the unique phone numbers while keeping the first occurrence of each
-        unique_df = output_df.drop_duplicates(subset=['phone_number'], keep='first')
-        unique_path = output_base / f'phone_numbers_unique_{date_range}.csv'
-        logger.info(f"Saving {len(unique_df)} unique numbers to: {unique_path}")
-        unique_df.to_csv(unique_path, index=False)
-        
-        # Create detailed log file with same name as the output file
-        log_path = output_base / f'phone_numbers_{date_range}.log'
-        with open(log_path, 'w') as log_file:
-            log_file.write(f"Processing completed at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            log_file.write(f"Input file: {input_path}\n")
-            log_file.write(f"Date range: {date_range}\n")
-            log_file.write(f"Total unique orders processed: {total_orders}\n")
-            log_file.write(f"Total valid phone numbers found: {len(output_df)}\n")
-            log_file.write(f"Total unique phone numbers: {len(unique_df)}\n")
-            log_file.write(f"Total invalid phone numbers: {len(invalid_df)}\n")
-            
-            # Country statistics
-            if not output_df.empty:
-                log_file.write("\nPhone numbers by country:\n")
-                country_counts = output_df['country'].value_counts().to_dict()
-                for country, count in country_counts.items():
-                    log_file.write(f"  {country}: {count}\n")
-            
-            # Language statistics
-            if not output_df.empty:
-                log_file.write("\nPhone numbers by language:\n")
-                language_counts = output_df['language'].value_counts().to_dict()
-                for language, count in language_counts.items():
-                    log_file.write(f"  {language}: {count}\n")
-        
-        logger.info(f"Detailed log saved to: {log_path}")
-        
     except Exception as e:
         logger.error(f"Error processing file: {str(e)}")
         raise
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python3 etl_phone_numbers_enhanced.py <input_path>")
+        print("Usage: python3 etl_phone_numbers.py <input_path>")
         sys.exit(1)
         
     input_path = sys.argv[1]
