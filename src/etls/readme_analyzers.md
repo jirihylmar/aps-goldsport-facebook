@@ -6,14 +6,14 @@ Scripts for processing Facebook Insights JSON data into CSV files.
 
 ## Scripts
 
-### etl__day.py
+### etl__fb_day.py
 Processes daily metrics from Facebook insights files.
 - Input: Files with pattern `*date__*.json` (excluding `to_date__`)
 - Output: 
   - `campaign_days.csv`: Daily campaign metrics
   - `ads_days.csv`: Daily ad-level metrics
 
-### etl__to_date.py
+### etl__fb_to_date.py
 Processes cumulative metrics from Facebook insights files.
 - Input: Files with pattern `*to_date__*.json`
 - Output:
@@ -23,10 +23,10 @@ Processes cumulative metrics from Facebook insights files.
 ## Usage
 ```bash
 # Process daily metrics
-python3 etl__day.py <insights_directory>
+python3 etl__fb_day.py <insights_directory>
 
 # Process cumulative metrics
-python3 etl__to_date.py <insights_directory>
+python3 etl__fb_to_date.py <insights_directory>
 ```
 
 ## Output Schema
