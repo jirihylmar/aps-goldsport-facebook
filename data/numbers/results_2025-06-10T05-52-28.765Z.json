@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "successful": 1,
+  "failed": 0,
+  "details": [
+    {
+      "success": true,
+      "phoneNumber": "+420704854909",
+      "messageId": "MM998fcdede6a68e43ce75ca06038417f9"
+    }
+  ]
+}

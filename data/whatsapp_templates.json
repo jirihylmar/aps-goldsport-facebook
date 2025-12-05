@@ -1,0 +1,12 @@
+{
+	"default": {
+	  "name": "general_notification_test",
+	  "language": "en_US",
+	  "components": [
+		{
+		  "type": "body",
+		  "parameters": []
+		}
+	  ]
+	}
+  }

@@ -1,3 +1,0 @@
-=== File: src/whatsapp/whatsappClient.js ===
-=== Size: 0KB ===
-

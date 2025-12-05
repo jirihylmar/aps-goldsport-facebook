@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "successful": 5,
+  "failed": 0,
+  "details": [
+    {
+      "success": true,
+      "phoneNumber": "+420736504005",
+      "messageId": "MMc52dce948c0171bc51c32b8f950ebba1"
+    },
+    {
+      "success": true,
+      "phoneNumber": "+420736504006",
+      "messageId": "MMc40ed3635f29fef8fcdc876fb89b7896"
+    },
+    {
+      "success": true,
+      "phoneNumber": "+420731658046",
+      "messageId": "MM736382d2be77e683cfbc2bdd65e50364"
+    },
+    {
+      "success": true,
+      "phoneNumber": "+420602492169",
+      "messageId": "MMaed39515929a78c568e61ce2ad704fc0"
+    },
+    {
+      "success": true,
+      "phoneNumber": "+420737859524",
+      "messageId": "MM53539650b068ea3856252eddede218ab"
+    }
+  ]
+}
